@@ -14,20 +14,8 @@ struct Chat: Codable, Hashable {
 }
 
 struct chatView: View {
-    @Namespace var bottomID
-    @State var test = ""
     
-    @State var modelList = ["asdf","afsf","xvc","asdff"]
-    @State var selectedModel: String = "asdf"
-    @State var chatList = [
-        Chat(name: "박민서", isMe: true, text: "진짜 뒤질거같아"),
-        Chat(name: "SteveJobs", isMe: false, text: "죽을 거같지? 참아라asdfghjk,mnbvcxsdfghjkl,mnbvc"),
-        Chat(name: "Me", isMe: true, text: "아니 진짜 뒤질거같다니까?")
-    ]
-    
-    @State private var ScrollViewOffset: CGFloat = 0
-        // 4. 정확한 값을 위해 startOffset 생성
-        @State private var StartOffset: CGFloat = 0
+    @ObservedObject var viewModel = ChatViewModel()
     
     var body: some View {
         VStack {
@@ -57,11 +45,11 @@ struct chatView: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
-                                    ForEach(modelList, id: \.self) { model in
+                                    ForEach(viewModel.modelList, id: \.self) { model in
                                         Button(action: {
-                                            self.selectedModel = model
+                                            viewModel.selectedModel = model
                                         }) {
-                                            if model == self.selectedModel {
+                                            if model == viewModel.selectedModel {
                                                 Text(model)
                                                     .font(.captionText4)
                                                     .lineLimit(1)
@@ -92,21 +80,21 @@ struct chatView: View {
                             }
                             
                             
-                            ForEach(chatList, id: \.self) { chat in
+                            ForEach(viewModel.chatList, id: \.self) { chat in
                                 chatCellView(
                                     isMe: chat.isMe,
                                     name: chat.name,
                                     subName: chat.isMe ? "Me" : "Coffee-Chatter",
                                     text: chat.text)
                             }
-                            ForEach(chatList, id: \.self) { chat in
+                            ForEach(viewModel.chatList, id: \.self) { chat in
                                 chatCellView(
                                     isMe: chat.isMe,
                                     name: chat.name,
                                     subName: chat.isMe ? "Me" : "Coffee-Chatter",
                                     text: chat.text)
                             }
-                            ForEach(chatList, id: \.self) { chat in
+                            ForEach(viewModel.chatList, id: \.self) { chat in
                                 chatCellView(
                                     isMe: chat.isMe,
                                     name: chat.name,
@@ -125,7 +113,7 @@ struct chatView: View {
                     }
                     
                     ZStack {
-                        TextField("채팅 내용 입력하기", text: $test)
+                        TextField("채팅 내용 입력하기", text: $viewModel.textFieldValue)
                             .font(.paragraph4)
                             .padding(EdgeInsets(top: 16, leading: 12, bottom: 16, trailing: 52))
                             .foregroundStyle(.main04)
@@ -143,7 +131,7 @@ struct chatView: View {
                                 ZStack {
                                     Circle()
                                         .frame(width: 28, height: 28)
-                                        .foregroundStyle(test.isEmpty ? .gray07 : .main01)
+                                        .foregroundStyle(viewModel.textFieldValue.isEmpty ? .gray07 : .main01)
                                     Image(systemName: "arrow.up")
                                         .foregroundStyle(.white)
                                 }
