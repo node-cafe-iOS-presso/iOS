@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193612B7FA1C800A20A47 /* AppleLogin.swift */; };
+		88FD6D6D2B7FB41500F45245 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D6C2B7FB41500F45245 /* loginView.swift */; };
+		88FD6D6F2B7FB4FB00F45245 /* exModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D6E2B7FB4FB00F45245 /* exModel.swift */; };
+		88FD6D712B7FB4FF00F45245 /* exView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D702B7FB4FF00F45245 /* exView.swift */; };
+		88FD6D732B7FB50500F45245 /* exViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D722B7FB50500F45245 /* exViewModel.swift */; };
 		DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768902B7F98FC00F00DA5 /* Constants.swift */; };
 		DDD768A32B7F98FC00F00DA5 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768922B7F98FC00F00DA5 /* Data+.swift */; };
 		DDD768A42B7F98FC00F00DA5 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768932B7F98FC00F00DA5 /* Color+.swift */; };
@@ -33,6 +37,10 @@
 /* Begin PBXFileReference section */
 		883193612B7FA1C800A20A47 /* AppleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogin.swift; sourceTree = "<group>"; };
 		883193632B7FA27000A20A47 /* Capella.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Capella.entitlements; sourceTree = "<group>"; };
+		88FD6D6C2B7FB41500F45245 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
+		88FD6D6E2B7FB4FB00F45245 /* exModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exModel.swift; sourceTree = "<group>"; };
+		88FD6D702B7FB4FF00F45245 /* exView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exView.swift; sourceTree = "<group>"; };
+		88FD6D722B7FB50500F45245 /* exViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exViewModel.swift; sourceTree = "<group>"; };
 		DDD768902B7F98FC00F00DA5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DDD768922B7F98FC00F00DA5 /* Data+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		DDD768932B7F98FC00F00DA5 /* Color+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		88FD6D592B7FB2ED00F45245 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				88FD6D722B7FB50500F45245 /* exViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -108,6 +117,7 @@
 		88FD6D5A2B7FB2F400F45245 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88FD6D702B7FB4FF00F45245 /* exView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +125,7 @@
 		88FD6D5B2B7FB2F900F45245 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88FD6D6E2B7FB4FB00F45245 /* exModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 		88FD6D5E2B7FB30800F45245 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88FD6D6C2B7FB41500F45245 /* loginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -414,7 +426,11 @@
 				DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */,
 				DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */,
 				883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */,
+				88FD6D712B7FB4FF00F45245 /* exView.swift in Sources */,
+				88FD6D6D2B7FB41500F45245 /* loginView.swift in Sources */,
+				88FD6D6F2B7FB4FB00F45245 /* exModel.swift in Sources */,
 				DDD768A82B7F98FC00F00DA5 /* Font+.swift in Sources */,
+				88FD6D732B7FB50500F45245 /* exViewModel.swift in Sources */,
 				DDD768A32B7F98FC00F00DA5 /* Data+.swift in Sources */,
 				DDD768A72B7F98FC00F00DA5 /* Date+.swift in Sources */,
 				DDD768A52B7F98FC00F00DA5 /* YearMonthDay+.swift in Sources */,
