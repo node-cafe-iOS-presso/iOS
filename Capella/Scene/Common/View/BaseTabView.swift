@@ -25,7 +25,7 @@ struct BaseTabView: View {
                                 .font(.captionText4)
                         }
                     
-                    ChatView()
+                    chatView()
                         .tabItem {
                             Image(systemName: "bubble.left.and.bubble.right.fill")
                             Text("채팅")
