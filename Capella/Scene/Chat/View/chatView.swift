@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct Chat: Codable, Hashable {
-    var name: String
-    var isMe: Bool
-    var text: String
-}
-
 struct chatView: View {
     
     @ObservedObject var viewModel = ChatViewModel()
