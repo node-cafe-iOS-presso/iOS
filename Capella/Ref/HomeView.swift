@@ -19,7 +19,7 @@ struct HomeView: View {
     
     var body: some View {
         if self.nextView == true {
-            
+            FinishCreateView()
         }
         else {
             ZStack() {
@@ -40,7 +40,7 @@ struct HomeView: View {
                                 VStack {
                                     Text("{UserName} 님만의\n새로운 Coffee-Chater를 생성해보세요!")
                                         .multilineTextAlignment(.center)
-                                        .font(.pretendard(.bold, size: 22.0))
+                                        .font(.pretendard(.bold, size: 20.0))
                                         .foregroundStyle(.white)
                                         .lineSpacing(8)
                                         .padding()
@@ -49,15 +49,14 @@ struct HomeView: View {
                                         nextView = true
                                     }, label: {
                                         Text("나만의 모델 생성하러 가기")
-//                                            .foregroundStyle(.white)
-//                                            .font(.pretendard(.semibold, size: 12.0))
-//                                            .background(
-//                                                RoundedRectangle(cornerRadius: 16, style: .circular)
-//                                                    .stroke(Color.white)
-//                                            )
-//                                            .padding(EdgeInsets(top: 8, leading: 26, bottom: 8, trailing: 26))
+                                            .foregroundStyle(.white)
+                                            .font(.pretendard(.semibold, size: 12.0))
+                                            .padding(EdgeInsets(top: 8, leading: 26, bottom: 8, trailing: 26))
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 16, style: .circular)
+                                                    .stroke(.white, lineWidth: 1)
+                                            )
                                     })
-                                    .frame(width: 156, height: 44)
                                 }
                             }
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 32, trailing: 0))

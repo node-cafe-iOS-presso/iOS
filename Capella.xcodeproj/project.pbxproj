@@ -40,6 +40,7 @@
 		DDD768BE2B7FD40C00F00DA5 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768BD2B7FD40C00F00DA5 /* MyView.swift */; };
 		DDD768C22B7FD42300F00DA5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768C12B7FD42300F00DA5 /* ChatView.swift */; };
 		DDD768C42B7FE2C500F00DA5 /* CreateChatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768C32B7FE2C500F00DA5 /* CreateChatterView.swift */; };
+		DDD768C62B7FF80C00F00DA5 /* FinishCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768C52B7FF80C00F00DA5 /* FinishCreateView.swift */; };
 		DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE264F92B7F90D80078FB33 /* CapellaApp.swift */; };
 		DDE264FC2B7F90D80078FB33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE264FB2B7F90D80078FB33 /* ContentView.swift */; };
 		DDE264FE2B7F90D90078FB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE264FD2B7F90D90078FB33 /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		DDD768BD2B7FD40C00F00DA5 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyView.swift; path = View/MyView.swift; sourceTree = SOURCE_ROOT; };
 		DDD768C12B7FD42300F00DA5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = View/ChatView.swift; sourceTree = SOURCE_ROOT; };
 		DDD768C32B7FE2C500F00DA5 /* CreateChatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateChatterView.swift; path = View/CreateChatterView.swift; sourceTree = SOURCE_ROOT; };
+		DDD768C52B7FF80C00F00DA5 /* FinishCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FinishCreateView.swift; path = View/FinishCreateView.swift; sourceTree = SOURCE_ROOT; };
 		DDE264F62B7F90D80078FB33 /* Capella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capella.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE264F92B7F90D80078FB33 /* CapellaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapellaApp.swift; sourceTree = "<group>"; };
 		DDE264FB2B7F90D80078FB33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				DDD768B62B7FD10C00F00DA5 /* HomeView.swift */,
 				DDD768C32B7FE2C500F00DA5 /* CreateChatterView.swift */,
+				DDD768C52B7FF80C00F00DA5 /* FinishCreateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				DDD768A72B7F98FC00F00DA5 /* Date+.swift in Sources */,
 				DDD768A52B7F98FC00F00DA5 /* YearMonthDay+.swift in Sources */,
 				DDD768B92B7FD29F00F00DA5 /* BaseTabView.swift in Sources */,
+				DDD768C62B7FF80C00F00DA5 /* FinishCreateView.swift in Sources */,
 				DDD768A62B7F98FC00F00DA5 /* ViewHiddenModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
