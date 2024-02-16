@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showMainView = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            if showMainView {
+                loginView()
+            } else {
+                ZStack {
+                    Image("SplashImage")
+                        .resizable()
+                }
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        withAnimation {
+                            showMainView = true
+                        }
+                    }
+                }
+            }
         }
-        .padding()
+        .ignoresSafeArea(.all)
     }
 }
 

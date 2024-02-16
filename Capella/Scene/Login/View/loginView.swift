@@ -10,7 +10,8 @@ import _AuthenticationServices_SwiftUI
 
 struct loginView: View {
     
-    @State var viewModel = loginViewModel()
+    @ObservedObject var viewModel = loginViewModel()
+    @State var isPresented = false
     
     var body: some View {
         ZStack {
@@ -18,7 +19,7 @@ struct loginView: View {
                 .ignoresSafeArea(.all)
             VStack {
                 Text("나만의 커피채터로\n내가 원하는 대화를 시작해보세요!")
-                    .font(.pretendard(.medium, size: 18))
+                    .font(.pretendard(.semibold, size: 18))
                     .lineSpacing(6)
                     .foregroundStyle(.white)
                     .multilineTextAlignment(.center)
@@ -46,15 +47,25 @@ struct loginView: View {
                         }
                     }
                 )
+                .onTapGesture { // Test용
+                    viewModel.postAppleToken(token: "test")
+                }
                 .frame(width: 345, height: 50)
                 .cornerRadius(12)
                 .signInWithAppleButtonStyle(.white)
-                .fullScreenCover(isPresented: $viewModel.isLogin, content: {
-                    ContentView()
-                })
-                
+                .fullScreenCover(isPresented: $viewModel.isLogin ){
+                    nextView()// 다음 화면 넘어가기
+                }
+
             }//: Vstack
-        }
+        }//: ZStack
+        
+    }
+}
+
+struct nextView: View {
+    var body: some View {
+        Color.blue
     }
 }
 
