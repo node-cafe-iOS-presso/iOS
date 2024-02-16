@@ -13,6 +13,11 @@
 		88FD6D712B7FB4FF00F45245 /* exView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D702B7FB4FF00F45245 /* exView.swift */; };
 		88FD6D732B7FB50500F45245 /* exViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D722B7FB50500F45245 /* exViewModel.swift */; };
 		88FD6D752B7FBBF900F45245 /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D742B7FBBF900F45245 /* loginViewModel.swift */; };
+		88FD6D782B7FCC7100F45245 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D772B7FCC7100F45245 /* APIManager.swift */; };
+		88FD6D7B2B7FCCDB00F45245 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 88FD6D7A2B7FCCDB00F45245 /* Alamofire */; };
+		88FD6D7E2B7FCD1500F45245 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 88FD6D7D2B7FCD1500F45245 /* Kingfisher */; };
+		88FD6D822B7FCEF300F45245 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D812B7FCEF300F45245 /* APIModel.swift */; };
+		88FD6D842B7FCF0300F45245 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D832B7FCF0300F45245 /* APIConstant.swift */; };
 		DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768902B7F98FC00F00DA5 /* Constants.swift */; };
 		DDD768A32B7F98FC00F00DA5 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768922B7F98FC00F00DA5 /* Data+.swift */; };
 		DDD768A42B7F98FC00F00DA5 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768932B7F98FC00F00DA5 /* Color+.swift */; };
@@ -48,6 +53,9 @@
 		88FD6D702B7FB4FF00F45245 /* exView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exView.swift; sourceTree = "<group>"; };
 		88FD6D722B7FB50500F45245 /* exViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exViewModel.swift; sourceTree = "<group>"; };
 		88FD6D742B7FBBF900F45245 /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
+		88FD6D772B7FCC7100F45245 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		88FD6D812B7FCEF300F45245 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		88FD6D832B7FCF0300F45245 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		DDD768902B7F98FC00F00DA5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DDD768922B7F98FC00F00DA5 /* Data+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		DDD768932B7F98FC00F00DA5 /* Color+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
@@ -82,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FD6D7E2B7FCD1500F45245 /* Kingfisher in Frameworks */,
+				88FD6D7B2B7FCCDB00F45245 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +283,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		88FD6D762B7FCC6300F45245 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				88FD6D772B7FCC7100F45245 /* APIManager.swift */,
+				88FD6D812B7FCEF300F45245 /* APIModel.swift */,
+				88FD6D832B7FCF0300F45245 /* APIConstant.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		DDD7688E2B7F98FC00F00DA5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +359,7 @@
 		DDE264F82B7F90D80078FB33 /* Capella */ = {
 			isa = PBXGroup;
 			children = (
+				88FD6D762B7FCC6300F45245 /* Service */,
 				88FD6D572B7FB2DF00F45245 /* Scene */,
 				883193632B7FA27000A20A47 /* Capella.entitlements */,
 				883193602B7FA1BC00A20A47 /* Ref */,
@@ -376,6 +397,10 @@
 			dependencies = (
 			);
 			name = Capella;
+			packageProductDependencies = (
+				88FD6D7A2B7FCCDB00F45245 /* Alamofire */,
+				88FD6D7D2B7FCD1500F45245 /* Kingfisher */,
+			);
 			productName = Capella;
 			productReference = DDE264F62B7F90D80078FB33 /* Capella.app */;
 			productType = "com.apple.product-type.application";
@@ -404,6 +429,10 @@
 				Base,
 			);
 			mainGroup = DDE264ED2B7F90D80078FB33;
+			packageReferences = (
+				88FD6D792B7FCCDB00F45245 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				88FD6D7C2B7FCD1500F45245 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = DDE264F72B7F90D80078FB33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -439,7 +468,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FD6D782B7FCC7100F45245 /* APIManager.swift in Sources */,
 				DDE264FC2B7F90D80078FB33 /* ContentView.swift in Sources */,
+				88FD6D842B7FCF0300F45245 /* APIConstant.swift in Sources */,
 				DDD768A42B7F98FC00F00DA5 /* Color+.swift in Sources */,
 				DDD768B32B7FCD3D00F00DA5 /* PrintFonts.swift in Sources */,
 				DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */,
@@ -450,6 +481,7 @@
 				DDD768BE2B7FD40C00F00DA5 /* MyView.swift in Sources */,
 				88FD6D6D2B7FB41500F45245 /* loginView.swift in Sources */,
 				88FD6D6F2B7FB4FB00F45245 /* exModel.swift in Sources */,
+				88FD6D822B7FCEF300F45245 /* APIModel.swift in Sources */,
 				88FD6D752B7FBBF900F45245 /* loginViewModel.swift in Sources */,
 				DDD768C22B7FD42300F00DA5 /* ChatView.swift in Sources */,
 				DDD768A82B7F98FC00F00DA5 /* Font+.swift in Sources */,
@@ -668,6 +700,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88FD6D792B7FCCDB00F45245 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+		88FD6D7C2B7FCD1500F45245 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88FD6D7A2B7FCCDB00F45245 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88FD6D792B7FCCDB00F45245 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		88FD6D7D2B7FCD1500F45245 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88FD6D7C2B7FCD1500F45245 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDE264EE2B7F90D80078FB33 /* Project object */;
 }
