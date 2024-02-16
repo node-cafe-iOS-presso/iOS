@@ -15,30 +15,35 @@ struct BaseTabView: View {
     }
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("메인")
-                        .font(.captionText4)
+        NavigationStack {
+            ZStack(alignment: .top) {
+                TabView {
+                    HomeView()
+                        .tabItem {
+                            Image(systemName: "house.fill")
+                            Text("메인")
+                                .font(.captionText4)
+                        }
+                    
+                    ChatView()
+                        .tabItem {
+                            Image(systemName: "bubble.left.and.bubble.right.fill")
+                            Text("채팅")
+                                .font(.captionText4)
+                        }
+                    
+                    MyView()
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                            Text("마이")
+                                .font(.captionText4)
+                        }
                 }
-            
-            ChatView()
-                .tabItem {
-                    Image(systemName: "bubble.left.and.bubble.right.fill")
-                    Text("채팅")
-                        .font(.captionText4)
-                }
-            
-            MyView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("마이")
-                        .font(.captionText4)
-                }
+                .foregroundStyle(.gray10)
+            .tint(.white)
+            }
         }
-        .foregroundStyle(.gray10)
-        .tint(.white)
+        .ignoresSafeArea()
     }
 }
 

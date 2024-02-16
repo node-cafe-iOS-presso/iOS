@@ -13,17 +13,35 @@ struct HomeView: View {
             Color.gray10
             
             ScrollView() {
-                ZStack() {
+                ZStack {
                     Image("MainHomeBackgroundImage")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                     
-                    VStack() {
+                    VStack {
                         
+                        
+                        Spacer()
                     }
                 } // ZStack
+                .ignoresSafeArea(.all)
             } // ScrollView
             .ignoresSafeArea(.all)
+            
+            VStack {
+                ZStack {
+                    Rectangle()
+                        .frame(width: screenWidth, height: 108)
+                        .foregroundStyle(.gray10)
+                    
+                    Image("TabBarLogo")
+                        .resizable()
+                        .frame(width: 127, height: 24)
+                        .offset(x: -108, y: 24)
+                } // ZStack
+                
+                Spacer()
+            }
         } // ZStack
         .ignoresSafeArea(.all)
         
