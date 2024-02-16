@@ -14,54 +14,23 @@ struct Chat: Codable, Hashable {
 }
 
 struct chatView: View {
+    @Namespace var bottomID
+    @State var test = ""
     
-    @State var textList = ["asdf","afsf","xvc","asdff"]
+    @State var modelList = ["asdf","afsf","xvc","asdff"]
+    @State var selectedModel: String = "asdf"
     @State var chatList = [
         Chat(name: "박민서", isMe: true, text: "진짜 뒤질거같아"),
         Chat(name: "SteveJobs", isMe: false, text: "죽을 거같지? 참아라asdfghjk,mnbvcxsdfghjkl,mnbvc"),
         Chat(name: "Me", isMe: true, text: "아니 진짜 뒤질거같다니까?")
     ]
     
+    @State private var ScrollViewOffset: CGFloat = 0
+        // 4. 정확한 값을 위해 startOffset 생성
+        @State private var StartOffset: CGFloat = 0
+    
     var body: some View {
-        
-        ZStack(alignment: .top) {
-            
-                ZStack(alignment: .top) {
-                    Image("MainBackgroundImage")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    ScrollView {
-                        VStack {
-                            ForEach(chatList, id: \.self) { chat in
-                                chatCellView(
-                                    isMe: chat.isMe,
-                                    name: chat.name,
-                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
-                                    text: chat.text)
-                            }
-                            ForEach(chatList, id: \.self) { chat in
-                                chatCellView(
-                                    isMe: chat.isMe,
-                                    name: chat.name,
-                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
-                                    text: chat.text)
-                            }
-                            ForEach(chatList, id: \.self) { chat in
-                                chatCellView(
-                                    isMe: chat.isMe,
-                                    name: chat.name,
-                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
-                                    text: chat.text)
-                            }
-                        }
-                        .padding(.vertical, 15)
-                    }
-                    
-                }
-                .offset(y:108)
-            
-            
-
+        VStack {
             VStack(spacing: 0) {
                 ZStack {
                     Rectangle()
@@ -71,13 +40,132 @@ struct chatView: View {
                         .font(.paragraph1)
                         .foregroundStyle(.white)
                         .offset(y:35)
+                    Divider()
+                        .background(.gray09)
+                        .offset(y:55)
                 }
-                Divider()
-                    .background(.gray09)
-                Spacer()
+                
             } // 상단 바
+            
+            ZStack(alignment: .top) {
+                Image("MainBackgroundImage")
+                    .resizable()
+                
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack {
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach(modelList, id: \.self) { model in
+                                        Button(action: {
+                                            self.selectedModel = model
+                                        }) {
+                                            if model == self.selectedModel {
+                                                Text(model)
+                                                    .font(.captionText4)
+                                                    .lineLimit(1)
+                                                    .padding(EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16))
+                                                    .foregroundStyle(.gray10)
+                                                    .background(
+                                                        RoundedRectangle(cornerRadius: 16, style: .circular)
+                                                            .stroke(.white, lineWidth: 1)
+                                                            .background(in: .capsule, fillStyle: .init())
+                                                    )
+                                            } else {
+                                                Text(model)
+                                                    .font(.captionText4)
+                                                    .lineLimit(1)
+                                                    .padding(EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16))
+                                                    .foregroundStyle(.white)
+                                                    .background(
+                                                        RoundedRectangle(cornerRadius: 16, style: .circular)
+                                                            .stroke(.white, lineWidth: 1)
+                                                    )
+                                            }
+                                            
+                                        }
+                                        Spacer(minLength: 8)
+                                    }
+                                }
+                                .padding(.horizontal, 24)
+                            }
+                            
+                            
+                            ForEach(chatList, id: \.self) { chat in
+                                chatCellView(
+                                    isMe: chat.isMe,
+                                    name: chat.name,
+                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
+                                    text: chat.text)
+                            }
+                            ForEach(chatList, id: \.self) { chat in
+                                chatCellView(
+                                    isMe: chat.isMe,
+                                    name: chat.name,
+                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
+                                    text: chat.text)
+                            }
+                            ForEach(chatList, id: \.self) { chat in
+                                chatCellView(
+                                    isMe: chat.isMe,
+                                    name: chat.name,
+                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
+                                    text: chat.text)
+                            }
+                            
+                            
+                            
+                        }
+                        .padding(.vertical, 15)
+                        .id("endOfChat")
+                        
+                        
+
+                    }
+                    
+                    ZStack {
+                        TextField("채팅 내용 입력하기", text: $test)
+                            .font(.paragraph4)
+                            .padding(EdgeInsets(top: 16, leading: 12, bottom: 16, trailing: 52))
+                            .foregroundStyle(.main04)
+                            .background(
+                                RoundedRectangle(cornerRadius: 20, style: .circular)
+                                    .foregroundStyle(.white)
+                            )
+                        HStack {
+                            Spacer()
+                            
+                            Button(action: {
+                                print("tap")
+                                proxy.scrollTo("endOfChat", anchor: .bottom)
+                            }, label: {
+                                ZStack {
+                                    Circle()
+                                        .frame(width: 28, height: 28)
+                                        .foregroundStyle(test.isEmpty ? .gray07 : .main01)
+                                    Image(systemName: "arrow.up")
+                                        .foregroundStyle(.white)
+                                }
+                                
+                            })
+                            .padding(.trailing, 12)
+                        }
+                    } // 텍스트필드 끝
+                        .padding(.horizontal, 24)
+//                        .padding(.vertical, 12)
+//                        .background(.clear)
+                        .background(.white)
+//                        .id("textFieldBottom")
+                }
+                
+//                .scrollPosition(id: ., anchor: .bottom)
+                
+            }
+//            .ignoresSafeArea(.all)
+            .background(.gray10)
         }
-        .ignoresSafeArea(.container)
+        .ignoresSafeArea()
         .background(.gray10)
     }
     
@@ -164,5 +252,5 @@ struct chatView: View {
 }
 
 #Preview {
-    chatView()
+    BaseTabView()
 }
