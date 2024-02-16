@@ -53,9 +53,8 @@ struct loginView: View {
                 .cornerRadius(8)
                 .signInWithAppleButtonStyle(.white)
                 .fullScreenCover(isPresented: $viewModel.isLogin ){
-                    nextView()// 다음 화면 넘어가기
+                    BaseTabView()// 다음 화면 넘어가기
                 }
-
             }//: Vstack
         }
         .onAppear() {
