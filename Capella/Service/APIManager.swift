@@ -13,12 +13,12 @@ import Alamofire
 class APIManager: ObservableObject  {
     static let shared = APIManager()
     private var headers: HTTPHeaders = [    //임시 슈퍼 jwt 토큰
-        "Authorization": "Bearer \(jwtToken)"
+        "Authorization": UserDefaults.standard.string(forKey: "userIdentifier") ?? "none"
     ]
     
     func setHeaderToSendImage() -> HTTPHeaders {
         headers = [
-            "Authorization": "Bearer \(jwtToken)",
+            "Authorization": UserDefaults.standard.string(forKey: "userIdentifier") ?? "none",
             "Content-Type" : "multipart/form-data"
         ]
         return headers
