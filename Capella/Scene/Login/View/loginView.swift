@@ -25,6 +25,8 @@ struct loginView: View {
                     .multilineTextAlignment(.center)
                 
                 Image("SwiftAndJobs")
+                    .resizable()
+                    .frame(width: 322.75, height: 299.66)
                     .padding(.top, 40)
                     .padding(.bottom, 80)
                 
@@ -47,9 +49,6 @@ struct loginView: View {
                         }
                     }
                 )
-                .onTapGesture { // Test용
-                    viewModel.postAppleToken(token: "test")
-                }
                 .frame(width: 345, height: 50)
                 .cornerRadius(12)
                 .signInWithAppleButtonStyle(.white)
