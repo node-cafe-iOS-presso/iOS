@@ -11,6 +11,7 @@ import PhotosUI
 class PhotoSelectorViewModel: ObservableObject {
     @Published var images = [UIImage]()
     @Published var selectedPhotos = [PhotosPickerItem]()
+    @Published var presentImage : UIImage?
     
     @MainActor
     func convertDataToImage() {
@@ -24,6 +25,8 @@ class PhotoSelectorViewModel: ObservableObject {
                         
                         if let image = UIImage(data: imageData) {
                             images.append(image)
+                            presentImage = image
+                            
                             FirebaseStorageManager.uploadImage(image: image, pathRoot: "") { url in
                                 if let url = url {
                                     print("myImageUrl : \(url.absoluteString)")
@@ -44,36 +47,57 @@ class PhotoSelectorViewModel: ObservableObject {
 
 struct PhotoSelectorView: View {
     @StateObject var vm = PhotoSelectorViewModel()
+    @Binding var isPhotoButtonSelected : Bool
+    
     let maxPhotosToSelect = 1
     
     var body: some View {
         VStack {
-            ScrollView(.horizontal) {
-                LazyHGrid(rows: [GridItem(.fixed(300))]) {
-                    ForEach(0..<vm.images.count, id: \.self) { index in
-                        Image(uiImage: vm.images[index])
-                            .resizable()
-                            .scaledToFit()
-                    }
-                }
-            }
+            
             PhotosPicker(
                 selection: $vm.selectedPhotos, // holds the selected photos from the picker
                 maxSelectionCount: maxPhotosToSelect, // sets the max number of photos the user can select
                 selectionBehavior: .ordered, // ensures we get the photos in the same order that the user selected them
                 matching: .images // filter the photos library to only show images
             ) {
-                // this label changes the text of photo to match either the plural or singular case based on the value in maxPhotosToSelect
-                Label("Select up to ^[\(maxPhotosToSelect) photo](inflect: true)", systemImage: "photo")
+                
+                if let image = vm.presentImage {
+                    ZStack {
+                        Image(uiImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 240)
+                    }
+                } else {
+                    ZStack {
+                        Image("NewProfile")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 240)
+                        
+                        VStack {
+                            Image(systemName: "plus")
+                                .foregroundStyle(.white)
+                                .frame(width: 21.88, height: 21.88)
+                                .padding(.bottom, 8)
+                            
+                            Text("새로운 Chatter의\n사진을 추가해주세요!")
+                                .font(.captionText1)
+                                .foregroundStyle(.white)
+                                .lineSpacing(4)
+                        }
+                    }
+                }
             }
         }
         .padding()
         .onChange(of: vm.selectedPhotos) { _, _ in
             vm.convertDataToImage()
+            isPhotoButtonSelected.toggle()
         }
     }
 }
 
-#Preview {
-    PhotoSelectorView()
-}
+//#Preview {
+//    PhotoSelectorView(isPhotoButtonSelected: f)
+//}
