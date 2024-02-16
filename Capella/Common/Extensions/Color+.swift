@@ -48,9 +48,9 @@ extension Color {
     
     // MARK: - System Color
     
-    static let alert = Color("Alert")
-    static let warning = Color("Warning")
-    static let complete = Color("Complete")
-    static let active = Color("Active")
+//    static let alert = Color("Alert")
+//    static let warning = Color("Warning")
+//    static let complete = Color("Complete")
+//    static let active = Color("Active")
 }
 
