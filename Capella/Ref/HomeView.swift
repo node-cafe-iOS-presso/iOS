@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct HomeView: View {
     
     
@@ -14,6 +15,7 @@ struct HomeView: View {
     
     @State var nextView: Bool = false
     
+    @StateObject var viewModel = HomeViewModel()
     
     // MARK: Body
     
@@ -81,12 +83,21 @@ struct HomeView: View {
                             }
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                             
-                            ScrollView(.horizontal) {
-                                
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach($viewModel.capellaList, id: \.self) { model in
+                                        cardCellView(cardModel: model)
+                                            .onTapGesture {
+                                                print("capella\(model.name) selected")
+                                            }
+                                        Spacer(minLength: 10)
+                                    }
+                                }
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 8)
                             }
                             .frame(width: screenWidth, height: 200)
-                            .background(.blue)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 32, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 22, trailing: 0))
                             
                             HStack {
                                 Text("{UserName}의 Coffee-Chatter")
@@ -108,12 +119,21 @@ struct HomeView: View {
                             }
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                             
-                            ScrollView(.horizontal) {
-                                
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach($viewModel.chatterList, id: \.self) { model in
+                                        cardCellView(cardModel: model)
+                                            .onTapGesture {
+                                                print("chatter\(model.name) selected")
+                                            }
+                                        Spacer(minLength: 10)
+                                    }
+                                }
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 8)
                             }
                             .frame(width: screenWidth, height: 200)
-                            .background(.blue)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 32, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 22, trailing: 0))
                             
                             HStack {
                                 Text("최근 진행한 커피챗")
@@ -135,12 +155,21 @@ struct HomeView: View {
                             }
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                             
-                            ScrollView(.horizontal) {
-                                
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach($viewModel.recentChattedList, id: \.self) { model in
+                                        cardCellView(cardModel: model)
+                                            .onTapGesture {
+                                                print("chat\(model.name) selected")
+                                            }
+                                        Spacer(minLength: 10)
+                                    }
+                                }
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 8)
                             }
                             .frame(width: screenWidth, height: 200)
-                            .background(.blue)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 32, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 22, trailing: 0))
                             
                             HStack {
                                 Text("최근 생성된 모델")
@@ -162,12 +191,21 @@ struct HomeView: View {
                             }
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                             
-                            ScrollView(.horizontal) {
-                                
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    ForEach($viewModel.recentlyGeneratedList, id: \.self) { model in
+                                        cardCellView(cardModel: model)
+                                            .onTapGesture {
+                                                print("model\(model.name) selected")
+                                            }
+                                        Spacer(minLength: 10)
+                                    }
+                                }
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 8)
                             }
                             .frame(width: screenWidth, height: 200)
-                            .background(.blue)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 32, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 22, trailing: 0))
                             
                             Spacer()
                         } // VStack
@@ -193,6 +231,34 @@ struct HomeView: View {
                 }
             } // ZStack
             .ignoresSafeArea(.all)
+        }
+    }
+    
+    private struct cardCellView: View {
+        
+        @Binding var cardModel: CardView
+        
+        var body: some View {
+            ZStack {
+                UrlImageView(url: URL(string: cardModel.image)!,
+                             size: CGSize(width: 160, height: 200))
+                
+                Color.black
+                    .frame(width: 160, height: 200)
+                    .opacity(0.2)
+                
+                
+                VStack {
+                    Spacer()
+                    Text(cardModel.name)
+                        .font(.paragraph4)
+                        .foregroundStyle(.white)
+                        .padding(.bottom, 16)
+                }
+                
+            }
+            .clipShape(.rect(cornerRadius: 10, style: .continuous))
+            .shadow(radius: 5)
         }
     }
 }
