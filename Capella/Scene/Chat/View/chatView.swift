@@ -71,32 +71,33 @@ struct chatView: View {
                                     }
                                 }
                                 .padding(.horizontal, 24)
+                                .padding(.vertical, 1)
                             }
                             
-                            
-                            ForEach(viewModel.chatList, id: \.self) { chat in
-                                chatCellView(
-                                    isMe: chat.isMe,
-                                    name: chat.name,
-                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
-                                    text: chat.text)
+                            if viewModel.chatList.isEmpty {
+                                Spacer(minLength: 200)
+                                Text("첫번째 채팅으로 대화를 시작하세요")
+                                    .font(.captionText2)
+                                    .lineLimit(1)
+                                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                                    .foregroundStyle(.gray10)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 16, style: .circular)
+                                            .stroke(.white, lineWidth: 1)
+                                            .background(in: .capsule, fillStyle: .init())
+                                    )
+                                Spacer()
+                            } else {
+                                ForEach(viewModel.chatList, id: \.self) { chat in
+                                    chatCellView(
+                                        isMe: chat.isMe,
+                                        name: chat.name,
+                                        subName: chat.isMe ? "Me" : "Coffee-Chatter",
+                                        text: chat.text)
+                                }
                             }
-                            ForEach(viewModel.chatList, id: \.self) { chat in
-                                chatCellView(
-                                    isMe: chat.isMe,
-                                    name: chat.name,
-                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
-                                    text: chat.text)
-                            }
-                            ForEach(viewModel.chatList, id: \.self) { chat in
-                                chatCellView(
-                                    isMe: chat.isMe,
-                                    name: chat.name,
-                                    subName: chat.isMe ? "Me" : "Coffee-Chatter",
-                                    text: chat.text)
-                            }
                             
-                            
+                        
                             
                         }
                         .padding(.vertical, 15)
