@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE2652B2B7F92A00078FB33 /* Info.plist */,
-				DDE265072B7F923D0078FB33 /* Common */,
+				DDE265072B7F923D0078FB33 /* Resource */,
 				DDE264F92B7F90D80078FB33 /* CapellaApp.swift */,
 				DDE264FB2B7F90D80078FB33 /* ContentView.swift */,
 				DDE264FD2B7F90D90078FB33 /* Assets.xcassets */,
@@ -108,15 +108,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		DDE265072B7F923D0078FB33 /* Common */ = {
+		DDE265072B7F923D0078FB33 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				DDE265082B7F923D0078FB33 /* Utils */,
 				DDE2650A2B7F923D0078FB33 /* Extensions */,
 				DDE265112B7F923D0078FB33 /* Fonts */,
 			);
-			name = Common;
-			path = ../../../Downloads/Common;
+			name = Resource;
+			path = ../../../Downloads/Resource;
 			sourceTree = "<group>";
 		};
 		DDE265082B7F923D0078FB33 /* Utils */ = {
