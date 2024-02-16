@@ -42,6 +42,9 @@
 		DDD768B92B7FD29F00F00DA5 /* BaseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768B82B7FD29F00F00DA5 /* BaseTabView.swift */; };
 		DDD768BE2B7FD40C00F00DA5 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768BD2B7FD40C00F00DA5 /* MyView.swift */; };
 		DDD768C22B7FD42300F00DA5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768C12B7FD42300F00DA5 /* ChatView.swift */; };
+		DDD768C42B7FE2C500F00DA5 /* CreateChatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768C32B7FE2C500F00DA5 /* CreateChatterView.swift */; };
+		DDD768C62B7FF80C00F00DA5 /* FinishCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768C52B7FF80C00F00DA5 /* FinishCreateView.swift */; };
+		DDD768C82B8005FE00F00DA5 /* CreateModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768C72B8005FE00F00DA5 /* CreateModelView.swift */; };
 		DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE264F92B7F90D80078FB33 /* CapellaApp.swift */; };
 		DDE264FC2B7F90D80078FB33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE264FB2B7F90D80078FB33 /* ContentView.swift */; };
 		DDE264FE2B7F90D90078FB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE264FD2B7F90D90078FB33 /* Assets.xcassets */; };
@@ -83,6 +86,9 @@
 		DDD768B82B7FD29F00F00DA5 /* BaseTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabView.swift; sourceTree = "<group>"; };
 		DDD768BD2B7FD40C00F00DA5 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyView.swift; path = View/MyView.swift; sourceTree = SOURCE_ROOT; };
 		DDD768C12B7FD42300F00DA5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = View/ChatView.swift; sourceTree = SOURCE_ROOT; };
+		DDD768C32B7FE2C500F00DA5 /* CreateChatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateChatterView.swift; path = View/CreateChatterView.swift; sourceTree = SOURCE_ROOT; };
+		DDD768C52B7FF80C00F00DA5 /* FinishCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FinishCreateView.swift; path = View/FinishCreateView.swift; sourceTree = SOURCE_ROOT; };
+		DDD768C72B8005FE00F00DA5 /* CreateModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateModelView.swift; path = View/CreateModelView.swift; sourceTree = SOURCE_ROOT; };
 		DDE264F62B7F90D80078FB33 /* Capella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capella.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE264F92B7F90D80078FB33 /* CapellaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapellaApp.swift; sourceTree = "<group>"; };
 		DDE264FB2B7F90D80078FB33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -214,6 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				DDD768B62B7FD10C00F00DA5 /* HomeView.swift */,
+				DDD768C32B7FE2C500F00DA5 /* CreateChatterView.swift */,
+				DDD768C52B7FF80C00F00DA5 /* FinishCreateView.swift */,
+				DDD768C72B8005FE00F00DA5 /* CreateModelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -485,11 +494,13 @@
 				DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */,
 				DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */,
 				DDD768B72B7FD10C00F00DA5 /* HomeView.swift in Sources */,
+				DDD768C82B8005FE00F00DA5 /* CreateModelView.swift in Sources */,
 				883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */,
 				88FD6D862B7FD1C800F45245 /* chatView.swift in Sources */,
 				88FD6D712B7FB4FF00F45245 /* exView.swift in Sources */,
 				DDD768BE2B7FD40C00F00DA5 /* MyView.swift in Sources */,
 				88FD6D6D2B7FB41500F45245 /* loginView.swift in Sources */,
+				DDD768C42B7FE2C500F00DA5 /* CreateChatterView.swift in Sources */,
 				88FD6D8A2B80053A00F45245 /* Chat.swift in Sources */,
 				88FD6D882B80041400F45245 /* ChatViewModel.swift in Sources */,
 				88FD6D6F2B7FB4FB00F45245 /* exModel.swift in Sources */,
@@ -502,6 +513,7 @@
 				DDD768A72B7F98FC00F00DA5 /* Date+.swift in Sources */,
 				DDD768A52B7F98FC00F00DA5 /* YearMonthDay+.swift in Sources */,
 				DDD768B92B7FD29F00F00DA5 /* BaseTabView.swift in Sources */,
+				DDD768C62B7FF80C00F00DA5 /* FinishCreateView.swift in Sources */,
 				DDD768A62B7F98FC00F00DA5 /* ViewHiddenModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
