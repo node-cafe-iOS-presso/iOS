@@ -20,29 +20,7 @@ struct HomeView: View {
     
     @State var nextView: Bool = false
     
-    @State var capellaList: [CardView] = [
-        CardView(modelId: 0, image: "https://firebasestorage.googleapis.com:443/v0/b/capella-2902a.appspot.com/o/B9F200AF-E147-4EE6-A92C-31D3C0481EA01708121054.137567?alt=media&token=26cf11f9-3075-4c0e-8a2a-c0708ee9ea22", name: "Jobs"),
-        CardView(modelId: 0, image: "asdf", name: "Jobs"),
-        CardView(modelId: 0, image: "asdf", name: "Jobs")
-    ]
-    
-    @State var chatterList: [CardView] = [
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "https://firebasestorage.googleapis.com:443/v0/b/capella-2902a.appspot.com/o/B9F200AF-E147-4EE6-A92C-31D3C0481EA01708121054.137567?alt=media&token=26cf11f9-3075-4c0e-8a2a-c0708ee9ea22", name: "chatter")
-    ]
-    
-    @State var recentChattedList: [CardView] = [
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "asdf", name: "chatter")
-    ]
-    
-    @State var recentlyGeneratedList: [CardView] = [
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "https://firebasestorage.googleapis.com:443/v0/b/capella-2902a.appspot.com/o/B9F200AF-E147-4EE6-A92C-31D3C0481EA01708121054.137567?alt=media&token=26cf11f9-3075-4c0e-8a2a-c0708ee9ea22", name: "chatter"),
-        CardView(modelId: 0, image: "asdf", name: "chatter")
-    ]
+    @StateObject var viewModel = HomeViewModel()
     
     // MARK: Body
     
@@ -112,7 +90,7 @@ struct HomeView: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
-                                    ForEach($capellaList, id: \.self) { model in
+                                    ForEach($viewModel.capellaList, id: \.self) { model in
                                         cardCellView(cardModel: model)
                                             .onTapGesture {
                                                 print("capella\(model.name) selected")
@@ -148,7 +126,7 @@ struct HomeView: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
-                                    ForEach($chatterList, id: \.self) { model in
+                                    ForEach($viewModel.chatterList, id: \.self) { model in
                                         cardCellView(cardModel: model)
                                             .onTapGesture {
                                                 print("chatter\(model.name) selected")
@@ -184,7 +162,7 @@ struct HomeView: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
-                                    ForEach($recentChattedList, id: \.self) { model in
+                                    ForEach($viewModel.recentChattedList, id: \.self) { model in
                                         cardCellView(cardModel: model)
                                             .onTapGesture {
                                                 print("chat\(model.name) selected")
@@ -220,7 +198,7 @@ struct HomeView: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
-                                    ForEach($recentlyGeneratedList, id: \.self) { model in
+                                    ForEach($viewModel.recentlyGeneratedList, id: \.self) { model in
                                         cardCellView(cardModel: model)
                                             .onTapGesture {
                                                 print("model\(model.name) selected")
