@@ -76,6 +76,173 @@
 			path = Ref;
 			sourceTree = "<group>";
 		};
+		88FD6D572B7FB2DF00F45245 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				88FD6D582B7FB2E500F45245 /* Common */,
+				88FD6D5C2B7FB2FD00F45245 /* Login */,
+				88FD6D602B7FB30F00F45245 /* Main */,
+				88FD6D642B7FB32200F45245 /* Chat */,
+				88FD6D682B7FB33900F45245 /* MyPage */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		88FD6D582B7FB2E500F45245 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				88FD6D5B2B7FB2F900F45245 /* Model */,
+				88FD6D5A2B7FB2F400F45245 /* View */,
+				88FD6D592B7FB2ED00F45245 /* ViewModel */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		88FD6D592B7FB2ED00F45245 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88FD6D5A2B7FB2F400F45245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88FD6D5B2B7FB2F900F45245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88FD6D5C2B7FB2FD00F45245 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				88FD6D5F2B7FB30B00F45245 /* Model */,
+				88FD6D5E2B7FB30800F45245 /* View */,
+				88FD6D5D2B7FB30200F45245 /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		88FD6D5D2B7FB30200F45245 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88FD6D5E2B7FB30800F45245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88FD6D5F2B7FB30B00F45245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88FD6D602B7FB30F00F45245 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				88FD6D632B7FB31D00F45245 /* Model */,
+				88FD6D622B7FB31A00F45245 /* View */,
+				88FD6D612B7FB31300F45245 /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		88FD6D612B7FB31300F45245 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88FD6D622B7FB31A00F45245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88FD6D632B7FB31D00F45245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88FD6D642B7FB32200F45245 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				88FD6D672B7FB33100F45245 /* Model */,
+				88FD6D662B7FB32E00F45245 /* View */,
+				88FD6D652B7FB32800F45245 /* ViewModel */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		88FD6D652B7FB32800F45245 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88FD6D662B7FB32E00F45245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88FD6D672B7FB33100F45245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88FD6D682B7FB33900F45245 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				88FD6D6B2B7FB34700F45245 /* Model */,
+				88FD6D6A2B7FB34400F45245 /* View */,
+				88FD6D692B7FB33F00F45245 /* ViewModel */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		88FD6D692B7FB33F00F45245 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88FD6D6A2B7FB34400F45245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88FD6D6B2B7FB34700F45245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DDD7688E2B7F98FC00F00DA5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +309,7 @@
 		DDE264F82B7F90D80078FB33 /* Capella */ = {
 			isa = PBXGroup;
 			children = (
+				88FD6D572B7FB2DF00F45245 /* Scene */,
 				883193632B7FA27000A20A47 /* Capella.entitlements */,
 				883193602B7FA1BC00A20A47 /* Ref */,
 				DDE2652B2B7F92A00078FB33 /* Info.plist */,
