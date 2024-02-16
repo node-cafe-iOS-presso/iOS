@@ -7,13 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8831936E2B7FA5D700A20A47 /* exVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831936D2B7FA5D700A20A47 /* exVM.swift */; };
-		883193702B7FA5E400A20A47 /* exView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8831936F2B7FA5E400A20A47 /* exView.swift */; };
-		883193722B7FA5EA00A20A47 /* exModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193712B7FA5EA00A20A47 /* exModel.swift */; };
-		883193742B7FA5EE00A20A47 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193732B7FA5EE00A20A47 /* login.swift */; };
-		883193762B7FA5F200A20A47 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193752B7FA5F200A20A47 /* main.swift */; };
-		883193782B7FA5F900A20A47 /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193772B7FA5F900A20A47 /* chat.swift */; };
-		8831937A2B7FA60300A20A47 /* myPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193792B7FA60300A20A47 /* myPage.swift */; };
 		883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193612B7FA1C800A20A47 /* AppleLogin.swift */; };
 		DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768902B7F98FC00F00DA5 /* Constants.swift */; };
 		DDD768A32B7F98FC00F00DA5 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768922B7F98FC00F00DA5 /* Data+.swift */; };
@@ -38,13 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8831936D2B7FA5D700A20A47 /* exVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exVM.swift; sourceTree = "<group>"; };
-		8831936F2B7FA5E400A20A47 /* exView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exView.swift; sourceTree = "<group>"; };
-		883193712B7FA5EA00A20A47 /* exModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exModel.swift; sourceTree = "<group>"; };
-		883193732B7FA5EE00A20A47 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
-		883193752B7FA5F200A20A47 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		883193772B7FA5F900A20A47 /* chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
-		883193792B7FA60300A20A47 /* myPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPage.swift; sourceTree = "<group>"; };
 		883193612B7FA1C800A20A47 /* AppleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogin.swift; sourceTree = "<group>"; };
 		883193632B7FA27000A20A47 /* Capella.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Capella.entitlements; sourceTree = "<group>"; };
 		DDD768902B7F98FC00F00DA5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -82,82 +68,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		883193642B7FA52500A20A47 /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				883193692B7FA5A900A20A47 /* Common */,
-				883193652B7FA56500A20A47 /* Login */,
-				883193662B7FA56A00A20A47 /* Main */,
-				883193672B7FA57100A20A47 /* Chat */,
-				883193682B7FA59000A20A47 /* MyPage */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
-		883193652B7FA56500A20A47 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				883193732B7FA5EE00A20A47 /* login.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		883193662B7FA56A00A20A47 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				883193752B7FA5F200A20A47 /* main.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		883193672B7FA57100A20A47 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				883193772B7FA5F900A20A47 /* chat.swift */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
-		883193682B7FA59000A20A47 /* MyPage */ = {
-			isa = PBXGroup;
-			children = (
-				883193792B7FA60300A20A47 /* myPage.swift */,
-			);
-			path = MyPage;
-			sourceTree = "<group>";
-		};
-		883193692B7FA5A900A20A47 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				8831936C2B7FA5C000A20A47 /* ViewModel */,
-				8831936B2B7FA5B900A20A47 /* View */,
-				8831936A2B7FA5AF00A20A47 /* Model */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		8831936A2B7FA5AF00A20A47 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				883193712B7FA5EA00A20A47 /* exModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8831936B2B7FA5B900A20A47 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8831936F2B7FA5E400A20A47 /* exView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8831936C2B7FA5C000A20A47 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				8831936D2B7FA5D700A20A47 /* exVM.swift */,
-			);
-			path = ViewModel;
 		883193602B7FA1BC00A20A47 /* Ref */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +142,6 @@
 		DDE264F82B7F90D80078FB33 /* Capella */ = {
 			isa = PBXGroup;
 			children = (
-				883193642B7FA52500A20A47 /* Scene */,
 				883193632B7FA27000A20A47 /* Capella.entitlements */,
 				883193602B7FA1BC00A20A47 /* Ref */,
 				DDE2652B2B7F92A00078FB33 /* Info.plist */,
@@ -335,19 +244,12 @@
 				DDE264FC2B7F90D80078FB33 /* ContentView.swift in Sources */,
 				DDD768A42B7F98FC00F00DA5 /* Color+.swift in Sources */,
 				DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */,
-				883193742B7FA5EE00A20A47 /* login.swift in Sources */,
-				883193702B7FA5E400A20A47 /* exView.swift in Sources */,
-				8831936E2B7FA5D700A20A47 /* exVM.swift in Sources */,
 				DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */,
-				883193722B7FA5EA00A20A47 /* exModel.swift in Sources */,
 				883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */,
 				DDD768A82B7F98FC00F00DA5 /* Font+.swift in Sources */,
 				DDD768A32B7F98FC00F00DA5 /* Data+.swift in Sources */,
-				8831937A2B7FA60300A20A47 /* myPage.swift in Sources */,
-				883193782B7FA5F900A20A47 /* chat.swift in Sources */,
 				DDD768A72B7F98FC00F00DA5 /* Date+.swift in Sources */,
 				DDD768A52B7F98FC00F00DA5 /* YearMonthDay+.swift in Sources */,
-				883193762B7FA5F200A20A47 /* main.swift in Sources */,
 				DDD768A62B7F98FC00F00DA5 /* ViewHiddenModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
