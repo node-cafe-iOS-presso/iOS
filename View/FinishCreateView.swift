@@ -12,7 +12,6 @@ struct FinishCreateView: View {
     
     @State private var startConversation = false
     @State private var backHome = false
-    @State private var postChatter = false
     
     
     var body: some View {
@@ -74,21 +73,6 @@ struct FinishCreateView: View {
                             RoundedRectangle(cornerRadius: 8, style: .circular)
                         )
                         .tint(.gray04)
-                })
-                .padding(.bottom, 8)
-                
-                Button(action: {
-                    self.postChatter.toggle()
-                }, label: {
-                    Text("내가 만든 Chatter 게시하기")
-                        .foregroundStyle(.white)
-                        .padding(EdgeInsets(top: 16, leading: 94, bottom: 16, trailing: 94))
-                        .font(.pretendard(.semibold, size: 14.0))
-                        .background(
-                            RoundedRectangle(cornerRadius: 8, style: .circular)
-                                .stroke(.white, lineWidth: 1)
-                        )
-                        .tint(.clear)
                 })
                 .padding(.bottom, 8)
             } // VStack
