@@ -33,6 +33,7 @@ enum relationship: String, CaseIterable, Equatable {
 struct CreateModelView: View {
     
     @State private var backToPage = false
+    @State private var isPhotoButtonSelected = false
     @State private var chatterName: String = ""
     @State private var roleName: String = ""
     @State private var isInformally = false
@@ -44,25 +45,9 @@ struct CreateModelView: View {
         ZStack {
             ScrollView {
                 Button(action: {
-                    
+                    isPhotoButtonSelected.toggle()
                 }, label: {
-                    ZStack {
-                        Image("NewProfile")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        
-                        VStack {
-                            Image(systemName: "plus")
-                                .foregroundStyle(.white)
-                                .frame(width: 21.88, height: 21.88)
-                                .padding(.bottom, 8)
-                            
-                            Text("새로운 Chatter의\n사진을 추가해주세요!")
-                                .font(.captionText1)
-                                .foregroundStyle(.white)
-                                .lineSpacing(4)
-                        }
-                    }
+                    PhotoSelectorView(isPhotoButtonSelected: $isPhotoButtonSelected)
                 })
                 .padding(.bottom, 40)
                 
@@ -369,11 +354,11 @@ struct CreateModelView: View {
                 .padding(.bottom, 40)
                 
                 Button(action: {
-                   
+                    
                 }, label: {
                     Text("Chatter 생성하기")
                         .foregroundStyle(.white)
-                        
+                    
                         .padding(EdgeInsets(top: 16, leading: 128, bottom: 16, trailing: 128))
                         .font(.pretendard(.semibold, size: 14.0))
                         .background(
@@ -408,7 +393,11 @@ struct CreateModelView: View {
                 } // ZStack
                 Spacer()
             }
-        }.ignoresSafeArea()
+        }
+        .ignoresSafeArea()
+        .sheet(isPresented: $isPhotoButtonSelected) {
+            PhotoSelectorView(isPhotoButtonSelected: $isPhotoButtonSelected)
+        }
     }
 }
 
