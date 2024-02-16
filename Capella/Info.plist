@@ -7,15 +7,15 @@
 		<string>Common/Fonts/esamanru-OTF-Bold.otf</string>
 		<string>Common/Fonts/esamanru-OTF-Medium.otf</string>
 		<string>Common/Fonts/esamanru-OTF-Light.otf</string>
-		<string>Common/Fonts/Pretendard-Black.otf</string>
-		<string>Common/Fonts/Pretendard-Regular.otf</string>
-		<string>Common/Fonts/Pretendard-Medium.otf</string>
-		<string>Common/Fonts/Pretendard-Light.otf</string>
-		<string>Common/Fonts/Pretendard-ExtraBold.otf</string>
-		<string>Common/Fonts/Pretendard-Bold.otf</string>
-		<string>Common/Fonts/Pretendard-Thin.otf</string>
-		<string>Common/Fonts/Pretendard-ExtraLight.otf</string>
-		<string>Common/Fonts/Pretendard-SemiBold.otf</string>
+		<string>Pretendard-Black.otf</string>
+		<string>Pretendard-Regular.otf</string>
+		<string>Pretendard-Medium.otf</string>
+		<string>Pretendard-Light.otf</string>
+		<string>Pretendard-ExtraBold.otf</string>
+		<string>Pretendard-Bold.otf</string>
+		<string>Pretendard-Thin.otf</string>
+		<string>Pretendard-ExtraLight.otf</string>
+		<string>Pretendard-SemiBold.otf</string>
 	</array>
 </dict>
 </plist>

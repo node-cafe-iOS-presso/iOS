@@ -34,6 +34,7 @@
 		DDD768AF2B7F98FC00F00DA5 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDD7689F2B7F98FC00F00DA5 /* Pretendard-Thin.otf */; };
 		DDD768B02B7F98FC00F00DA5 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDD768A02B7F98FC00F00DA5 /* Pretendard-ExtraLight.otf */; };
 		DDD768B12B7F98FC00F00DA5 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDD768A12B7F98FC00F00DA5 /* Pretendard-SemiBold.otf */; };
+		DDD768B32B7FCD3D00F00DA5 /* PrintFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768B22B7FCD3D00F00DA5 /* PrintFonts.swift */; };
 		DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE264F92B7F90D80078FB33 /* CapellaApp.swift */; };
 		DDE264FC2B7F90D80078FB33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE264FB2B7F90D80078FB33 /* ContentView.swift */; };
 		DDE264FE2B7F90D90078FB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE264FD2B7F90D90078FB33 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		DDD7689F2B7F98FC00F00DA5 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		DDD768A02B7F98FC00F00DA5 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		DDD768A12B7F98FC00F00DA5 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		DDD768B22B7FCD3D00F00DA5 /* PrintFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintFonts.swift; sourceTree = "<group>"; };
 		DDE264F62B7F90D80078FB33 /* Capella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capella.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE264F92B7F90D80078FB33 /* CapellaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapellaApp.swift; sourceTree = "<group>"; };
 		DDE264FB2B7F90D80078FB33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				883193612B7FA1C800A20A47 /* AppleLogin.swift */,
+				DDD768B22B7FCD3D00F00DA5 /* PrintFonts.swift */,
 			);
 			path = Ref;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				DDE264FC2B7F90D80078FB33 /* ContentView.swift in Sources */,
 				88FD6D842B7FCF0300F45245 /* APIConstant.swift in Sources */,
 				DDD768A42B7F98FC00F00DA5 /* Color+.swift in Sources */,
+				DDD768B32B7FCD3D00F00DA5 /* PrintFonts.swift in Sources */,
 				DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */,
 				DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */,
 				883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */,

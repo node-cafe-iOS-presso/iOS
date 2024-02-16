@@ -19,7 +19,7 @@ struct loginView: View {
                 .ignoresSafeArea(.all)
             VStack {
                 Text("나만의 커피채터로\n내가 원하는 대화를 시작해보세요!")
-                    .font(.pretendard(.semibold, size: 18))
+                    .font(.pretendard(.semibold, size: 22))
                     .lineSpacing(6)
                     .foregroundStyle(.white)
                     .multilineTextAlignment(.center)
@@ -50,13 +50,16 @@ struct loginView: View {
                     }
                 )
                 .frame(width: 345, height: 50)
-                .cornerRadius(12)
+                .cornerRadius(8)
                 .signInWithAppleButtonStyle(.white)
                 .fullScreenCover(isPresented: $viewModel.isLogin ){
                     nextView()// 다음 화면 넘어가기
                 }
 
             }//: Vstack
+        }
+        .onAppear() {
+            printAll()
         }//: ZStack
         
     }
