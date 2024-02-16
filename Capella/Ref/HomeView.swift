@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct CardView: Codable, Hashable {
-    var modelId: Int
-    var image: String
-    var name: String
-}
 
 struct HomeView: View {
     
