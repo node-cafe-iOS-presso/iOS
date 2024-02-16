@@ -32,13 +32,16 @@ struct loginView: View {
                 
                 SignInWithAppleButton(
                     onRequest: { request in
-                        // 애플 로그인 요청 설정
+                        let appleIDProvider = ASAuthorizationAppleIDProvider()
+                        let request = appleIDProvider.createRequest()
+                        request.requestedScopes = [.fullName, .email]
                     },
                     onCompletion: { result in
                         // 애플 로그인 완료 후 처리
                         switch result {
                         case .success(let authResults):
                             // 로그인 성공
+                            guard let appleIDCredential = authResults.credential as? ASAuthorizationAppleIDCredential else { return }
                             print("Authentication successful: \(authResults)")
                             // token POST
                             viewModel.postAppleToken(token: authResults.credential.description)
@@ -58,7 +61,7 @@ struct loginView: View {
             }//: Vstack
         }
         .onAppear() {
-            printAll()
+            // printAll()
         }//: ZStack
         
     }
