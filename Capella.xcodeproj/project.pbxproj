@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193612B7FA1C800A20A47 /* AppleLogin.swift */; };
 		DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768902B7F98FC00F00DA5 /* Constants.swift */; };
 		DDD768A32B7F98FC00F00DA5 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768922B7F98FC00F00DA5 /* Data+.swift */; };
 		DDD768A42B7F98FC00F00DA5 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD768932B7F98FC00F00DA5 /* Color+.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		883193612B7FA1C800A20A47 /* AppleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogin.swift; sourceTree = "<group>"; };
 		DDD768902B7F98FC00F00DA5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DDD768922B7F98FC00F00DA5 /* Data+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		DDD768932B7F98FC00F00DA5 /* Color+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		883193602B7FA1BC00A20A47 /* Ref */ = {
+			isa = PBXGroup;
+			children = (
+				883193612B7FA1C800A20A47 /* AppleLogin.swift */,
+			);
+			path = Ref;
+			sourceTree = "<group>";
+		};
 		DDD7688E2B7F98FC00F00DA5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		DDE264F82B7F90D80078FB33 /* Capella */ = {
 			isa = PBXGroup;
 			children = (
+				883193602B7FA1BC00A20A47 /* Ref */,
 				DDE2652B2B7F92A00078FB33 /* Info.plist */,
 				DDD7688E2B7F98FC00F00DA5 /* Common */,
 				DDE264F92B7F90D80078FB33 /* CapellaApp.swift */,
@@ -232,6 +243,7 @@
 				DDD768A42B7F98FC00F00DA5 /* Color+.swift in Sources */,
 				DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */,
 				DDD768A22B7F98FC00F00DA5 /* Constants.swift in Sources */,
+				883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */,
 				DDD768A82B7F98FC00F00DA5 /* Font+.swift in Sources */,
 				DDD768A32B7F98FC00F00DA5 /* Data+.swift in Sources */,
 				DDD768A72B7F98FC00F00DA5 /* Date+.swift in Sources */,
