@@ -9,6 +9,9 @@ import SwiftUI
 import _AuthenticationServices_SwiftUI
 
 struct loginView: View {
+    
+    @State var viewModel = loginViewModel()
+    
     var body: some View {
         ZStack {
             Image("Onboarding2")
@@ -34,6 +37,9 @@ struct loginView: View {
                         case .success(let authResults):
                             // 로그인 성공
                             print("Authentication successful: \(authResults)")
+                            // token POST
+                            viewModel.postAppleToken(token: authResults.credential.description)
+                            
                         case .failure(let error):
                             // 로그인 실패
                             print("Error occurred: \(error.localizedDescription)")
@@ -43,6 +49,9 @@ struct loginView: View {
                 .frame(width: 345, height: 50)
                 .cornerRadius(12)
                 .signInWithAppleButtonStyle(.white)
+                .fullScreenCover(isPresented: $viewModel.isLogin, content: {
+                    ContentView()
+                })
                 
             }//: Vstack
         }
