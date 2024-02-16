@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE264F92B7F90D80078FB33 /* CapellaApp.swift */; };
+		DDE264FC2B7F90D80078FB33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE264FB2B7F90D80078FB33 /* ContentView.swift */; };
+		DDE264FE2B7F90D90078FB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE264FD2B7F90D90078FB33 /* Assets.xcassets */; };
+		DDE265012B7F90D90078FB33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE265002B7F90D90078FB33 /* Preview Assets.xcassets */; };
+		DDE2651B2B7F923E0078FB33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE265092B7F923D0078FB33 /* Constants.swift */; };
+		DDE2651C2B7F923E0078FB33 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2650B2B7F923D0078FB33 /* Data+.swift */; };
+		DDE2651D2B7F923E0078FB33 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2650C2B7F923D0078FB33 /* Color+.swift */; };
+		DDE2651E2B7F923E0078FB33 /* YearMonthDay+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2650D2B7F923D0078FB33 /* YearMonthDay+.swift */; };
+		DDE2651F2B7F923E0078FB33 /* ViewHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2650E2B7F923D0078FB33 /* ViewHiddenModifier.swift */; };
+		DDE265202B7F923E0078FB33 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2650F2B7F923D0078FB33 /* Date+.swift */; };
+		DDE265212B7F923E0078FB33 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE265102B7F923D0078FB33 /* Font+.swift */; };
+		DDE265222B7F923E0078FB33 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE265122B7F923D0078FB33 /* Pretendard-Regular.otf */; };
+		DDE265232B7F923E0078FB33 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE265132B7F923D0078FB33 /* Pretendard-Black.otf */; };
+		DDE265242B7F923E0078FB33 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE265142B7F923D0078FB33 /* Pretendard-Medium.otf */; };
+		DDE265252B7F923E0078FB33 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE265152B7F923D0078FB33 /* Pretendard-Light.otf */; };
+		DDE265262B7F923E0078FB33 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE265162B7F923D0078FB33 /* Pretendard-ExtraBold.otf */; };
+		DDE265272B7F923E0078FB33 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE265172B7F923D0078FB33 /* Pretendard-Bold.otf */; };
+		DDE265282B7F923E0078FB33 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE265182B7F923D0078FB33 /* Pretendard-Thin.otf */; };
+		DDE265292B7F923E0078FB33 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE265192B7F923D0078FB33 /* Pretendard-ExtraLight.otf */; };
+		DDE2652A2B7F923E0078FB33 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE2651A2B7F923D0078FB33 /* Pretendard-SemiBold.otf */; };
+		DDE2652F2B7F93D90078FB33 /* esamanru-OTF-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE2652C2B7F93D90078FB33 /* esamanru-OTF-Medium.otf */; };
+		DDE265302B7F93D90078FB33 /* esamanru-OTF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE2652D2B7F93D90078FB33 /* esamanru-OTF-Bold.otf */; };
+		DDE265312B7F93D90078FB33 /* esamanru-OTF-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDE2652E2B7F93D90078FB33 /* esamanru-OTF-Light.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DDE264F62B7F90D80078FB33 /* Capella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capella.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE264F92B7F90D80078FB33 /* CapellaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapellaApp.swift; sourceTree = "<group>"; };
+		DDE264FB2B7F90D80078FB33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DDE264FD2B7F90D90078FB33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDE265002B7F90D90078FB33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DDE265092B7F923D0078FB33 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DDE2650B2B7F923D0078FB33 /* Data+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
+		DDE2650C2B7F923D0078FB33 /* Color+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		DDE2650D2B7F923D0078FB33 /* YearMonthDay+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YearMonthDay+.swift"; sourceTree = "<group>"; };
+		DDE2650E2B7F923D0078FB33 /* ViewHiddenModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHiddenModifier.swift; sourceTree = "<group>"; };
+		DDE2650F2B7F923D0078FB33 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		DDE265102B7F923D0078FB33 /* Font+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		DDE265122B7F923D0078FB33 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		DDE265132B7F923D0078FB33 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		DDE265142B7F923D0078FB33 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		DDE265152B7F923D0078FB33 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		DDE265162B7F923D0078FB33 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		DDE265172B7F923D0078FB33 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		DDE265182B7F923D0078FB33 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		DDE265192B7F923D0078FB33 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		DDE2651A2B7F923D0078FB33 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		DDE2652B2B7F92A00078FB33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DDE2652C2B7F93D90078FB33 /* esamanru-OTF-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "esamanru-OTF-Medium.otf"; path = "../../esamanru_OTF(Mac)/esamanru-OTF-Medium.otf"; sourceTree = "<group>"; };
+		DDE2652D2B7F93D90078FB33 /* esamanru-OTF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "esamanru-OTF-Bold.otf"; path = "../../esamanru_OTF(Mac)/esamanru-OTF-Bold.otf"; sourceTree = "<group>"; };
+		DDE2652E2B7F93D90078FB33 /* esamanru-OTF-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "esamanru-OTF-Light.otf"; path = "../../esamanru_OTF(Mac)/esamanru-OTF-Light.otf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDE264F32B7F90D80078FB33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDE264ED2B7F90D80078FB33 = {
+			isa = PBXGroup;
+			children = (
+				DDE264F82B7F90D80078FB33 /* Capella */,
+				DDE264F72B7F90D80078FB33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDE264F72B7F90D80078FB33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDE264F62B7F90D80078FB33 /* Capella.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDE264F82B7F90D80078FB33 /* Capella */ = {
+			isa = PBXGroup;
+			children = (
+				DDE2652B2B7F92A00078FB33 /* Info.plist */,
+				DDE265072B7F923D0078FB33 /* Common */,
+				DDE264F92B7F90D80078FB33 /* CapellaApp.swift */,
+				DDE264FB2B7F90D80078FB33 /* ContentView.swift */,
+				DDE264FD2B7F90D90078FB33 /* Assets.xcassets */,
+				DDE264FF2B7F90D90078FB33 /* Preview Content */,
+			);
+			path = Capella;
+			sourceTree = "<group>";
+		};
+		DDE264FF2B7F90D90078FB33 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DDE265002B7F90D90078FB33 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DDE265072B7F923D0078FB33 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DDE265082B7F923D0078FB33 /* Utils */,
+				DDE2650A2B7F923D0078FB33 /* Extensions */,
+				DDE265112B7F923D0078FB33 /* Fonts */,
+			);
+			name = Common;
+			path = ../../../Downloads/Common;
+			sourceTree = "<group>";
+		};
+		DDE265082B7F923D0078FB33 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DDE265092B7F923D0078FB33 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DDE2650A2B7F923D0078FB33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDE2650B2B7F923D0078FB33 /* Data+.swift */,
+				DDE2650C2B7F923D0078FB33 /* Color+.swift */,
+				DDE2650D2B7F923D0078FB33 /* YearMonthDay+.swift */,
+				DDE2650E2B7F923D0078FB33 /* ViewHiddenModifier.swift */,
+				DDE2650F2B7F923D0078FB33 /* Date+.swift */,
+				DDE265102B7F923D0078FB33 /* Font+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DDE265112B7F923D0078FB33 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DDE2652D2B7F93D90078FB33 /* esamanru-OTF-Bold.otf */,
+				DDE2652E2B7F93D90078FB33 /* esamanru-OTF-Light.otf */,
+				DDE2652C2B7F93D90078FB33 /* esamanru-OTF-Medium.otf */,
+				DDE265122B7F923D0078FB33 /* Pretendard-Regular.otf */,
+				DDE265132B7F923D0078FB33 /* Pretendard-Black.otf */,
+				DDE265142B7F923D0078FB33 /* Pretendard-Medium.otf */,
+				DDE265152B7F923D0078FB33 /* Pretendard-Light.otf */,
+				DDE265162B7F923D0078FB33 /* Pretendard-ExtraBold.otf */,
+				DDE265172B7F923D0078FB33 /* Pretendard-Bold.otf */,
+				DDE265182B7F923D0078FB33 /* Pretendard-Thin.otf */,
+				DDE265192B7F923D0078FB33 /* Pretendard-ExtraLight.otf */,
+				DDE2651A2B7F923D0078FB33 /* Pretendard-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDE264F52B7F90D80078FB33 /* Capella */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDE265042B7F90D90078FB33 /* Build configuration list for PBXNativeTarget "Capella" */;
+			buildPhases = (
+				DDE264F22B7F90D80078FB33 /* Sources */,
+				DDE264F32B7F90D80078FB33 /* Frameworks */,
+				DDE264F42B7F90D80078FB33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Capella;
+			productName = Capella;
+			productReference = DDE264F62B7F90D80078FB33 /* Capella.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDE264EE2B7F90D80078FB33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					DDE264F52B7F90D80078FB33 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = DDE264F12B7F90D80078FB33 /* Build configuration list for PBXProject "Capella" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDE264ED2B7F90D80078FB33;
+			productRefGroup = DDE264F72B7F90D80078FB33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDE264F52B7F90D80078FB33 /* Capella */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDE264F42B7F90D80078FB33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE265312B7F93D90078FB33 /* esamanru-OTF-Light.otf in Resources */,
+				DDE2652F2B7F93D90078FB33 /* esamanru-OTF-Medium.otf in Resources */,
+				DDE2652A2B7F923E0078FB33 /* Pretendard-SemiBold.otf in Resources */,
+				DDE265012B7F90D90078FB33 /* Preview Assets.xcassets in Resources */,
+				DDE265272B7F923E0078FB33 /* Pretendard-Bold.otf in Resources */,
+				DDE265292B7F923E0078FB33 /* Pretendard-ExtraLight.otf in Resources */,
+				DDE265242B7F923E0078FB33 /* Pretendard-Medium.otf in Resources */,
+				DDE265302B7F93D90078FB33 /* esamanru-OTF-Bold.otf in Resources */,
+				DDE265282B7F923E0078FB33 /* Pretendard-Thin.otf in Resources */,
+				DDE265262B7F923E0078FB33 /* Pretendard-ExtraBold.otf in Resources */,
+				DDE265222B7F923E0078FB33 /* Pretendard-Regular.otf in Resources */,
+				DDE265232B7F923E0078FB33 /* Pretendard-Black.otf in Resources */,
+				DDE264FE2B7F90D90078FB33 /* Assets.xcassets in Resources */,
+				DDE265252B7F923E0078FB33 /* Pretendard-Light.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDE264F22B7F90D80078FB33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE264FC2B7F90D80078FB33 /* ContentView.swift in Sources */,
+				DDE2651D2B7F923E0078FB33 /* Color+.swift in Sources */,
+				DDE264FA2B7F90D80078FB33 /* CapellaApp.swift in Sources */,
+				DDE265212B7F923E0078FB33 /* Font+.swift in Sources */,
+				DDE2651B2B7F923E0078FB33 /* Constants.swift in Sources */,
+				DDE2651E2B7F923E0078FB33 /* YearMonthDay+.swift in Sources */,
+				DDE2651C2B7F923E0078FB33 /* Data+.swift in Sources */,
+				DDE2651F2B7F923E0078FB33 /* ViewHiddenModifier.swift in Sources */,
+				DDE265202B7F923E0078FB33 /* Date+.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DDE265022B7F90D90078FB33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DDE265032B7F90D90078FB33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDE265052B7F90D90078FB33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Capella/Preview Content\"";
+				DEVELOPMENT_TEAM = 2DF5SKQK2R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Capella/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youz2me.Capella;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDE265062B7F90D90078FB33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Capella/Preview Content\"";
+				DEVELOPMENT_TEAM = 2DF5SKQK2R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Capella/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youz2me.Capella;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDE264F12B7F90D80078FB33 /* Build configuration list for PBXProject "Capella" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE265022B7F90D90078FB33 /* Debug */,
+				DDE265032B7F90D90078FB33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDE265042B7F90D90078FB33 /* Build configuration list for PBXNativeTarget "Capella" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE265052B7F90D90078FB33 /* Debug */,
+				DDE265062B7F90D90078FB33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDE264EE2B7F90D80078FB33 /* Project object */;
+}
