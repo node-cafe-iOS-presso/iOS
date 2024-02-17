@@ -17,6 +17,10 @@ struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
     
+    init() {
+        self.viewModel.fetchDatas()
+    }
+    
     // MARK: Body
     
     var body: some View {

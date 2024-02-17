@@ -17,7 +17,7 @@ struct Constant {
     static let postCreateModel = model
     static let getLoadAllModels = model
     
-    static func getLoadUsersModels(userId: Int) -> String  {
+    static func getLoadUsersModels(userId: String) -> String  {
         return "\(model)/user/\(userId)"
     }
     

@@ -38,4 +38,23 @@ class HomeViewModel: ObservableObject {
 //        print("서버로 보냄 : \(token)")
 //        self.isLogin = true
 //    }
+    
+    func fetchDatas() {
+        if let userID = UserDefaults.standard.string(forKey: "userIdentifier") {
+            APIManager.shared.getData(
+                urlEndpointString: Constant.getLoadUsersModels(userId: userID),
+                responseDataType: LoadUsersModelResponseModel.self,
+                requestDataType: LoadUsersModelResponseModel.self,
+                parameter: nil ) { model in
+                    let cardViewList = model.map {
+                        return CardView(
+                            modelId: $0.id,
+                            image: "", // 이미지 추가할 때 변경 필요
+                            name: $0.name)
+                    }
+                    
+                    self.chatterList = cardViewList
+                }
+        }
+    }
 }
