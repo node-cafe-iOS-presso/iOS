@@ -12,17 +12,9 @@ import Alamofire
 
 class APIManager: ObservableObject  {
     static let shared = APIManager()
-    private var headers: HTTPHeaders = [    //임시 슈퍼 jwt 토큰
-        "Authorization": UserDefaults.standard.string(forKey: "userIdentifier") ?? "none"
+    private var headers: HTTPHeaders = [
+        "user_id": UserDefaults.standard.string(forKey: "userIdentifier") ?? "none"
     ]
-    
-    func setHeaderToSendImage() -> HTTPHeaders {
-        headers = [
-            "Authorization": UserDefaults.standard.string(forKey: "userIdentifier") ?? "none",
-            "Content-Type" : "multipart/form-data"
-        ]
-        return headers
-    }
 }
 
 
@@ -74,36 +66,6 @@ extension APIManager {
                 }
             }
             .resume()
-    }
-    
-    /// 서버에 이미지 post할 때 사용합니다.
-    /// request 타입은 정의할 필요 없고 들어갈 이미지 배열을 파라미터에 넣어주세요.
-    func postImage<U: Decodable>(urlEndpointString: String,
-                                            responseDataType: U.Type,
-                                            images: [Data],
-                                            completionHandler: @escaping (U)->Void) {
-        guard let url = URL(string: Constant.baseURL + urlEndpointString) else { return }
-        print("post image 요청 URL --> \(url)")
-        
-        AF.upload(multipartFormData: { MultipartFormData in
-            for image in images {
-                MultipartFormData.append(image, withName: "images", fileName: "\(image).png", mimeType: "image/png")
-            }
-        }, to: url, method: .post, headers: setHeaderToSendImage())
-        .validate()
-        .responseDecodable(of: U.self) { response in
-            print(response)
-            switch response.result {
-            case .success(let success):
-                completionHandler(success)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        .responseString(completionHandler: { response in
-            print(response)
-        })
-        .resume()
     }
     
     func patchData<T: Codable, U: Decodable>(urlEndpointString: String,
