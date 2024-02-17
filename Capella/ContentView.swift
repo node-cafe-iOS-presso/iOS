@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if showMainView {
-                BaseTabView()
+                loginView()
             } else {
                 ZStack {
                     Image("SplashImage")

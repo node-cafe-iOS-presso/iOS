@@ -32,5 +32,12 @@ struct Constant {
     
 //    static func deletemodel
    
+    static let createUser = "/user"
+    static func getFindUser(token: String) -> String {
+        return "/user/:\(token)"
+    }
+    static func patchUpdateProfile(id: String) -> String {
+        return "/user/:\(id)"
+    }
 }
 
