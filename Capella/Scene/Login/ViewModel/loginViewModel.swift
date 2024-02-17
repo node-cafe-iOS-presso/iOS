@@ -14,7 +14,17 @@ class loginViewModel: ObservableObject {
     
     /// 토큰 전송
     func postAppleToken(token: String) {
-        print("서버로 보냄 : \(token)")
+        APIManager.shared.postData(
+            urlEndpointString: Constant.createUser,
+            responseDataType: CreateUserResponseModel?.self,
+            requestDataType: CreateUserRequestModel.self,
+            parameter: CreateUserRequestModel(token: token, name: "유진")) { response in
+                print(response!)
+                
+                UserDefaults.standard.set(response?.token!, forKey: "UserIdentifier")
+                UserDefaults.standard.set(response?.name!, forKey: "UserName")
+            }
+        
         self.isLogin = true
     }
 }
