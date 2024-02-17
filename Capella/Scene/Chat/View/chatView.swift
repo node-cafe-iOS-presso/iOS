@@ -9,6 +9,9 @@ import SwiftUI
 
 struct chatView: View {
     
+    init(selectedModel: String) {
+        self.viewModel.selectedModel = selectedModel
+    }
     @ObservedObject var viewModel = ChatViewModel()
     
     var body: some View {
@@ -18,7 +21,7 @@ struct chatView: View {
                     Rectangle()
                         .frame(width: screenWidth, height: 108)
                         .foregroundStyle(.gray10)
-                    Text("Steve Jobs")
+                    Text(viewModel.selectedModel)
                         .font(.paragraph1)
                         .foregroundStyle(.white)
                         .offset(y:35)
@@ -42,6 +45,7 @@ struct chatView: View {
                                     ForEach(viewModel.modelList, id: \.self) { model in
                                         Button(action: {
                                             viewModel.selectedModel = model
+                                            viewModel.clearChat()
                                         }) {
                                             if model == viewModel.selectedModel {
                                                 Text(model)
@@ -51,8 +55,9 @@ struct chatView: View {
                                                     .foregroundStyle(.gray10)
                                                     .background(
                                                         RoundedRectangle(cornerRadius: 16, style: .circular)
-                                                            .stroke(.white, lineWidth: 1)
+                                                            .fill(.white)
                                                             .background(in: .capsule, fillStyle: .init())
+                                                            
                                                     )
                                             } else {
                                                 Text(model)
@@ -80,7 +85,7 @@ struct chatView: View {
                                     .font(.captionText2)
                                     .lineLimit(1)
                                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-                                    .foregroundStyle(.gray10)
+                                    .foregroundStyle(.white)
                                     .background(
                                         RoundedRectangle(cornerRadius: 16, style: .circular)
                                             .stroke(.white, lineWidth: 1)
@@ -111,16 +116,17 @@ struct chatView: View {
                         TextField("채팅 내용 입력하기", text: $viewModel.textFieldValue)
                             .font(.paragraph4)
                             .padding(EdgeInsets(top: 16, leading: 12, bottom: 16, trailing: 52))
-                            .foregroundStyle(.main04)
+                            .foregroundStyle(.white)
                             .background(
                                 RoundedRectangle(cornerRadius: 20, style: .circular)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.gray10)
                             )
                         HStack {
                             Spacer()
                             
                             Button(action: {
                                 print("tap")
+                                viewModel.postNextChat()
                                 proxy.scrollTo("endOfChat", anchor: .bottom)
                             }, label: {
                                 ZStack {
@@ -128,28 +134,27 @@ struct chatView: View {
                                         .frame(width: 28, height: 28)
                                         .foregroundStyle(viewModel.textFieldValue.isEmpty ? .gray07 : .main01)
                                     Image(systemName: "arrow.up")
-                                        .foregroundStyle(.white)
+                                        .foregroundStyle(.gray10)
                                 }
                                 
                             })
                             .padding(.trailing, 12)
+                            .padding(.bottom, 1)
                         }
                     } // 텍스트필드 끝
                         .padding(.horizontal, 24)
-//                        .padding(.vertical, 12)
-//                        .background(.clear)
-                        .background(.white)
-//                        .id("textFieldBottom")
+                        .background(.gray10)
                 }
-                
-//                .scrollPosition(id: ., anchor: .bottom)
-                
             }
-//            .ignoresSafeArea(.all)
+            .ignoresSafeArea()
             .background(.gray10)
+            
         }
         .ignoresSafeArea()
         .background(.gray10)
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
     
     private struct chatCellView: View {
@@ -235,5 +240,5 @@ struct chatView: View {
 }
 
 #Preview {
-    BaseTabView()
+    BaseTabView(selection: 0)
 }

@@ -14,6 +14,7 @@ struct HomeView: View {
     // MARK: Variable
     
     @State var nextView: Bool = false
+    @State var nextChatView: Bool = false
     
     @StateObject var viewModel = HomeViewModel()
     
@@ -26,6 +27,8 @@ struct HomeView: View {
     var body: some View {
         if self.nextView == true {
             CreateModelView()
+        } else if self.nextChatView == true {
+            chatView(selectedModel: "Ms.Lee")
         }
         else {
             ZStack() {
@@ -98,6 +101,9 @@ struct HomeView: View {
                                         cardCellView(cardModel: model)
                                             .onTapGesture {
                                                 print("capella\(model.name) selected")
+                                                if model.name.wrappedValue == "이길여" {
+                                                    nextChatView = true
+                                                }
                                             }
                                         Spacer(minLength: 10)
                                     }
@@ -252,9 +258,9 @@ struct HomeView: View {
                 UrlImageView(url: URL(string: cardModel.image)!,
                              size: CGSize(width: 160, height: 200))
                 
-                Color.black
-                    .frame(width: 160, height: 200)
-                    .opacity(0.2)
+//                Color.black
+//                    .frame(width: 160, height: 200)
+//                    .opacity(0.2)
                 
                 
                 VStack {

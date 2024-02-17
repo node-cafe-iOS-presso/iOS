@@ -151,9 +151,9 @@ struct CreateModelView: View {
                                         .foregroundStyle(.gray10)
                                         .background(
                                             RoundedRectangle(cornerRadius: 16, style: .circular)
-                                                .stroke(.white, lineWidth: 1)
-                                                .background(in: .capsule, fillStyle: .init())
-                                        )
+                                                .fill(.white)
+                                         )
+                                        
                                 } else {
                                     Text(model)
                                         .font(.captionText4)
@@ -196,9 +196,8 @@ struct CreateModelView: View {
                                         .foregroundStyle(.gray10)
                                         .background(
                                             RoundedRectangle(cornerRadius: 16, style: .circular)
-                                                .stroke(.white, lineWidth: 1)
-                                                .background(in: .capsule, fillStyle: .init())
-                                        )
+                                                .fill(.white)
+                                         )
                                 } else {
                                     Text(model)
                                         .font(.captionText4)
@@ -241,9 +240,8 @@ struct CreateModelView: View {
                                         .foregroundStyle(.gray10)
                                         .background(
                                             RoundedRectangle(cornerRadius: 16, style: .circular)
-                                                .stroke(.white, lineWidth: 1)
-                                                .background(in: .capsule, fillStyle: .init())
-                                        )
+                                                .fill(.white)
+                                         )
                                 } else {
                                     Text(model)
                                         .font(.captionText4)
@@ -287,9 +285,8 @@ struct CreateModelView: View {
                                             .foregroundStyle(.gray10)
                                             .background(
                                                 RoundedRectangle(cornerRadius: 16, style: .circular)
-                                                    .stroke(.white, lineWidth: 1)
-                                                    .background(in: .capsule, fillStyle: .init())
-                                            )
+                                                    .fill(.white)
+                                             )
                                     } else {
                                         Text(model)
                                             .font(.captionText4)
@@ -334,9 +331,8 @@ struct CreateModelView: View {
                                         .foregroundStyle(.gray10)
                                         .background(
                                             RoundedRectangle(cornerRadius: 16, style: .circular)
-                                                .stroke(.white, lineWidth: 1)
-                                                .background(in: .capsule, fillStyle: .init())
-                                        )
+                                                .fill(.white)
+                                         )
                                 } else {
                                     Text(model)
                                         .font(.captionText4)
@@ -363,10 +359,10 @@ struct CreateModelView: View {
                             tone: viewModel.tonesSelectedModel,
                             style: viewModel.answersSelectedModel,
                             readerLevel: viewModel.conversationsSelectedModel,
-                            relationship: viewModel.relationshipsSelectedModel,
+                            relationship: viewModel.relationshipsSelectedModel == "선택하지 않음" ? nil : viewModel.relationshipsSelectedModel,
                             isInFormal: viewModel.extraSelectedModel == "" ? "INACTIVE" : "ACTIVE",
                             modelCoverImage: viewModel.imageUrl,
-                            question: "어떻게 해야 현명한 삶을 살 수 있을까?"))
+                            question: "형님 ... 인생이 힘들어요"))
                         DispatchQueue.main.async {
                             self.isNext = true
                         }
@@ -375,13 +371,13 @@ struct CreateModelView: View {
                     }, label: {
                         Text("Chatter 생성하기")
                             .foregroundStyle(.white)
-                        
                             .padding(EdgeInsets(top: 16, leading: 128, bottom: 16, trailing: 128))
                             .font(.pretendard(.semibold, size: 14.0))
                             .background(
                                 RoundedRectangle(cornerRadius: 8, style: .circular)
+                                    .fill(.main01)
                             )
-                            .tint(.main01)
+                            
                     })
                     .padding(.bottom, 8)
                     
@@ -414,6 +410,9 @@ struct CreateModelView: View {
             .ignoresSafeArea()
             .sheet(isPresented: $isPhotoButtonSelected) {
                 PhotoSelectorView(isPhotoButtonSelected: $isPhotoButtonSelected)
+            }
+            .onTapGesture {
+                hideKeyboard()
             }
         }
         

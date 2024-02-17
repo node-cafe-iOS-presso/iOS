@@ -22,7 +22,7 @@ struct UrlImageView: View {
             .placeholder {
                 // 이미지 로딩 중에 표시할 임시 이미지 (선택사항)
 //                Image("placeholderImage")
-                Color.gray05
+                Color.gray03
             }
             .loadDiskFileSynchronously(true) // 디스크로부터 이미지 동기적으로 로드 (선택사항)
             .cacheMemoryOnly() // 메모리에만 캐시하고 디스크에는 캐시하지 않음 (선택사항)
@@ -39,7 +39,7 @@ struct UrlImageView: View {
                 // 이미지 로드가 실패한 경우 호출되는 클로저 (선택사항)
                 //print("이미지 로딩 실패: \(error)")
             }
-            .frame(width: size?.width, height: size?.height) // 이미지 프레임 크기 설정
-            .scaledToFit() // 이미지 비율 유지하며 프레임에 맞춤
+            .resizable()// 이미지 프레임 크기 설정
+            .aspectRatio(contentMode: .fill) // 이미지 비율 유지하며 프레임에 맞춤
     }
 }

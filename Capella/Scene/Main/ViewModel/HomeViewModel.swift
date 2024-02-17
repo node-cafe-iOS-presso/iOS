@@ -9,28 +9,33 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     
+    init() {
+        self.fetchDatas()
+    }
+    
     @Published var capellaList: [CardView] = [
-        CardView(modelId: 0, image: "https://firebasestorage.googleapis.com:443/v0/b/capella-2902a.appspot.com/o/B9F200AF-E147-4EE6-A92C-31D3C0481EA01708121054.137567?alt=media&token=26cf11f9-3075-4c0e-8a2a-c0708ee9ea22", name: "Jobs"),
-        CardView(modelId: 0, image: "asdf", name: "Jobs"),
-        CardView(modelId: 0, image: "asdf", name: "Jobs")
+        CardView(modelId: 0, image: "https://i.namu.wiki/i/S-a-EJ8V4CVZdU1ol7X88OzBdEjz4qgMuTJcIXPfDe6wlRPTv865dng38lzlVk8Q0CJm3-RRCry4fM-w8aaVUR_q7ErOj18ImXXcRpIogmlm3aFE_cKyGQtkZFhJcC9x2zeiO7zF-FowazNEgggIrZ0HTwwkEfhZNlMYSQ59IfE.webp", name: "이길여"),
+        CardView(modelId: 0, image: "https://image.edaily.co.kr/images/photo/files/NP/S/2023/12/PS23120100506.jpg", name: "Taylor Swift"),
+        CardView(modelId: 0, image: "https://hips.hearstapps.com/hmg-prod/images/apple-ceo-steve-jobs-speaks-during-an-apple-special-event-news-photo-1683661736.jpg?crop=0.757xw:0.534xh;0.0799xw,0.0372xh&resize=1200:*", name: "Steve Jobs"),
+        CardView(modelId: 0, image: "https://wimg.mk.co.kr/meet/neds/2022/06/image_readtop_2022_556367_16561184505086722.jpeg", name: "Elon Musk"),
+        CardView(modelId: 0, image: "https://i.pcmag.com/imagery/articles/040JHoVNgc1gh2e7sunj82k-1..v1569492349.png", name: "Linus Torvalds")
     ]
     
     @Published var chatterList: [CardView] = [
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "https://firebasestorage.googleapis.com:443/v0/b/capella-2902a.appspot.com/o/B9F200AF-E147-4EE6-A92C-31D3C0481EA01708121054.137567?alt=media&token=26cf11f9-3075-4c0e-8a2a-c0708ee9ea22", name: "chatter")
+        CardView(modelId: 0, image: "https://image.cine21.com/resize/cine21/person/2018/0423/13_42_54__5add644ed52f5%5BW578-%5D.jpg", name: "마동석"),
+        CardView(modelId: 0, image: "https://thumbnews.nateimg.co.kr/view610///news.nateimg.co.kr/orgImg/tn/2022/12/04/tn_1670510464342_363754_0.jpg", name: "허윤진"),
+        CardView(modelId: 0, image: "https://www.kukinews.com/data/kuk/image/2022/10/24/kuk202210240314.png", name: "이찬혁")
     ]
     
     @Published var recentChattedList: [CardView] = [
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "asdf", name: "chatter")
+        CardView(modelId: 0, image: "https://www.kukinews.com/data/kuk/image/2022/10/24/kuk202210240314.png", name: "이찬혁"),
+        CardView(modelId: 0, image: "https://wimg.mk.co.kr/meet/neds/2022/06/image_readtop_2022_556367_16561184505086722.jpeg", name: "Elon Musk"),
+        CardView(modelId: 0, image: "https://image.edaily.co.kr/images/photo/files/NP/S/2023/12/PS23120100506.jpg", name: "Taylor Swift")
     ]
     
     @Published var recentlyGeneratedList: [CardView] = [
-        CardView(modelId: 0, image: "asdf", name: "chatter"),
-        CardView(modelId: 0, image: "https://firebasestorage.googleapis.com:443/v0/b/capella-2902a.appspot.com/o/B9F200AF-E147-4EE6-A92C-31D3C0481EA01708121054.137567?alt=media&token=26cf11f9-3075-4c0e-8a2a-c0708ee9ea22", name: "chatter"),
-        CardView(modelId: 0, image: "asdf", name: "chatter")
+        CardView(modelId: 0, image: "https://image.cine21.com/resize/cine21/person/2018/0423/13_42_54__5add644ed52f5%5BW578-%5D.jpg", name: "마동석"),
+        CardView(modelId: 0, image: "https://thumbnews.nateimg.co.kr/view610///news.nateimg.co.kr/orgImg/tn/2022/12/04/tn_1670510464342_363754_0.jpg", name: "허윤진")
     ]
     
     /// 토큰 전송
