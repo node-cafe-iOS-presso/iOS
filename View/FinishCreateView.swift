@@ -12,6 +12,7 @@ struct FinishCreateView: View {
     
     @State private var startConversation = false
     @State private var backHome = false
+    @ObservedObject var finishViewModel = FinishViewModel()
     
     
     var body: some View {
@@ -20,6 +21,10 @@ struct FinishCreateView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: screenWidth, height: screenHeight)
+            
+            if let url = finishViewModel.model?.modelCoverImage {
+                UrlImageView(url: URL(string: url)!, size: .init(width: screenWidth, height: screenHeight))
+            }
             
             Rectangle()
                 .frame(width: screenWidth, height: screenHeight)
@@ -30,12 +35,12 @@ struct FinishCreateView: View {
                     .frame(width: screenWidth,height: 280)
                     .foregroundStyle(.clear)
                 
-                Text("이길여")
+                Text(finishViewModel.model?.name ?? "모델")
                     .font(.title1)
                     .foregroundStyle(.white)
                     .padding(.bottom, 8)
                 
-                Text("Chatter가 생성되었어요!\n지금 바로 운명적인 대화를 시작해볼까요?")
+                Text("\(finishViewModel.model?.name ?? "모델")가 생성되었어요!\n지금 바로 운명적인 대화를 시작해볼까요?")
                     .multilineTextAlignment(.center)
                     .font(.paragraph1)
                     .foregroundStyle(.white)
@@ -47,6 +52,7 @@ struct FinishCreateView: View {
                 
                 Button(action: {
                     self.startConversation.toggle()
+                    finishViewModel.makeModel()
                 }, label: {
                     Text("운명적인 대화 시작하기")
                         .foregroundStyle(.black)
@@ -55,6 +61,7 @@ struct FinishCreateView: View {
                         .font(.pretendard(.semibold, size: 14.0))
                         .background(
                             RoundedRectangle(cornerRadius: 8, style: .circular)
+                                .fill(.white)
                         )
                         .tint(.white)
                         

@@ -14,10 +14,15 @@ typealias LoadUsersModelResponseModel = [Model]
 
 struct Model: Codable {
     let id: Int
-    let user: String
+    let userId: Int
     let name: String
-    let person: String
-    let attitude: String
+    let role: String
+    let tone: String
+    let style: String
+    let readerLevel: String
+    let relationship: String?
+    let isInFormal: String
+    let modelCoverImage: String?
     let createdAt: String
     let updatedAt: String
     let deletedAt: String?

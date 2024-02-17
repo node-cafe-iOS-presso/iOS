@@ -25,7 +25,7 @@ struct HomeView: View {
     
     var body: some View {
         if self.nextView == true {
-            FinishCreateView()
+            CreateModelView()
         }
         else {
             ZStack() {
@@ -44,7 +44,7 @@ struct HomeView: View {
                                     .aspectRatio(contentMode: .fit)
                                 
                                 VStack {
-                                    Text("{UserName} 님만의\n새로운 Coffee-Chater를 생성해보세요!")
+                                    Text("유진 님만의\n새로운 Coffee-Chater를 생성해보세요!")
                                         .multilineTextAlignment(.center)
                                         .font(.pretendard(.bold, size: 20.0))
                                         .foregroundStyle(.white)
@@ -52,7 +52,12 @@ struct HomeView: View {
                                         .padding()
                                     
                                     Button(action: {
-                                        nextView = true
+                                        DispatchQueue.main.async {
+                                            withAnimation {
+                                                nextView = true
+                                            }
+                                            
+                                        }
                                     }, label: {
                                         Text("나만의 모델 생성하러 가기")
                                             .foregroundStyle(.white)
@@ -104,7 +109,7 @@ struct HomeView: View {
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 22, trailing: 0))
                             
                             HStack {
-                                Text("{UserName}의 Coffee-Chatter")
+                                Text("유진 님의 Coffee-Chatter")
                                     .font(.pretendard(.bold, size: 20.0))
                                     .foregroundStyle(.white)
                                     .padding(.leading, 24)
@@ -114,7 +119,7 @@ struct HomeView: View {
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
                             
                             HStack {
-                                Text("{UserName} 님이 직접 제작하신 모델과 대화를 나누어보세요!")
+                                Text("유진 님이 직접 제작하신 모델과 대화를 나누어보세요!")
                                     .font(.captionText4)
                                     .foregroundStyle(.white)
                                     .padding(.leading, 24)
@@ -150,7 +155,7 @@ struct HomeView: View {
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
                             
                             HStack {
-                                Text("{UserName} 님이 최근 진행하신 커피챗들을 모아봤어요.")
+                                Text("유진 님이 최근 진행하신 커피챗들을 모아봤어요.")
                                     .font(.captionText4)
                                     .foregroundStyle(.white)
                                     .padding(.leading, 24)
@@ -186,7 +191,7 @@ struct HomeView: View {
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
                             
                             HStack {
-                                Text("{UserName} 님이 최근 생성하신 커피챗들을 모아봤어요.")
+                                Text("유진 님이 최근 생성하신 커피챗들을 모아봤어요.")
                                     .font(.captionText4)
                                     .foregroundStyle(.white)
                                     .padding(.leading, 24)

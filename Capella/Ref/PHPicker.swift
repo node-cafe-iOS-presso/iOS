@@ -30,6 +30,7 @@ class PhotoSelectorViewModel: ObservableObject {
                             FirebaseStorageManager.uploadImage(image: image, pathRoot: "") { url in
                                 if let url = url {
                                     print("myImageUrl : \(url.absoluteString)")
+                                    NotificationCenter.default.post(name: Notification.Name("imageURL"), object: nil, userInfo: ["message": url.absoluteString])
                                     print("이미지 업로드 완료")
                                 }
                                 
