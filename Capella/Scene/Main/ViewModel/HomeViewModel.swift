@@ -53,7 +53,7 @@ class HomeViewModel: ObservableObject {
                     let cardViewList = model.map {
                         return CardView(
                             modelId: $0.id,
-                            image: "", // 이미지 추가할 때 변경 필요
+                            image: $0.modelCoverImage ?? "", // 이미지 추가할 때 변경 필요
                             name: $0.name)
                     }
                     
@@ -61,7 +61,7 @@ class HomeViewModel: ObservableObject {
                 }
             
             /// 최근 진행한 커피챗
-            
+             
             /// 최근 생성된 커피챗들
             APIManager.shared.getData(
                 urlEndpointString: Constant.getLoadAllModels,
@@ -71,7 +71,7 @@ class HomeViewModel: ObservableObject {
                     let cardViewList = model.map {
                         return CardView(
                             modelId: $0.id,
-                            image: "", // 이미지 추가할 때 변경 필요
+                            image: $0.modelCoverImage ?? "", // 이미지 추가할 때 변경 필요
                             name: $0.name)
                     }
                     

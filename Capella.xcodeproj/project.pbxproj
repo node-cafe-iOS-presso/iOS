@@ -10,6 +10,7 @@
 		883193622B7FA1C800A20A47 /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883193612B7FA1C800A20A47 /* AppleLogin.swift */; };
 		88CE43BD2B802AC30087B0BD /* CreateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE43BC2B802AC30087B0BD /* CreateModel.swift */; };
 		88CE43BF2B802C3E0087B0BD /* LoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE43BE2B802C3E0087B0BD /* LoadModel.swift */; };
+		88CE43C12B8043100087B0BD /* FinishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE43C02B8043100087B0BD /* FinishViewModel.swift */; };
 		88FD6D6D2B7FB41500F45245 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D6C2B7FB41500F45245 /* loginView.swift */; };
 		88FD6D6F2B7FB4FB00F45245 /* exModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D6E2B7FB4FB00F45245 /* exModel.swift */; };
 		88FD6D712B7FB4FF00F45245 /* exView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD6D702B7FB4FF00F45245 /* exView.swift */; };
@@ -72,6 +73,7 @@
 		883193632B7FA27000A20A47 /* Capella.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Capella.entitlements; sourceTree = "<group>"; };
 		88CE43BC2B802AC30087B0BD /* CreateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModel.swift; sourceTree = "<group>"; };
 		88CE43BE2B802C3E0087B0BD /* LoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadModel.swift; sourceTree = "<group>"; };
+		88CE43C02B8043100087B0BD /* FinishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewModel.swift; sourceTree = "<group>"; };
 		88FD6D6C2B7FB41500F45245 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		88FD6D6E2B7FB4FB00F45245 /* exModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exModel.swift; sourceTree = "<group>"; };
 		88FD6D702B7FB4FF00F45245 /* exView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exView.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				DDD768C92B80132C00F00DA5 /* CreateModelViewModel.swift */,
 				88FD6DA32B801EB200F45245 /* HomeViewModel.swift */,
+				88CE43C02B8043100087B0BD /* FinishViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				DDD768B92B7FD29F00F00DA5 /* BaseTabView.swift in Sources */,
 				DDD768C62B7FF80C00F00DA5 /* FinishCreateView.swift in Sources */,
 				DD28A2C72B8029D40028B20D /* CreateUser.swift in Sources */,
+				88CE43C12B8043100087B0BD /* FinishViewModel.swift in Sources */,
 				88FD6DA62B8021BC00F45245 /* CardView.swift in Sources */,
 				DDD768A62B7F98FC00F00DA5 /* ViewHiddenModifier.swift in Sources */,
 			);

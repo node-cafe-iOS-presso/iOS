@@ -10,12 +10,12 @@ import Foundation
 class ChatViewModel: ObservableObject {
     
     @Published var textFieldValue = ""
-    @Published var modelList = ["Taylor Swift","Steve Jobs","xvc","asdff"]
+    @Published var modelList = ["Taylor Swift","Steve Jobs","Linus Torvalds","Ms.Lee"]
     @Published var selectedModel: String = ""
     @Published var chatList: [Chat] = [
-//        Chat(name: "박민서", isMe: true, text: "진짜 뒤질거같아"),
-//        Chat(name: "SteveJobs", isMe: false, text: "죽을 거같지? 참아라asdfghjk,mnbvcxsdfghjkl,mnbvc"),
-//        Chat(name: "Me", isMe: true, text: "아니 진짜 뒤질거같다니까?")
+        Chat(name: "박민서", isMe: true, text: "진짜 뒤질거같아"),
+        Chat(name: "SteveJobs", isMe: false, text: "죽을 거같지? 참아라asdfghjk,mnbvcxsdfghjkl,mnbvc"),
+        Chat(name: "Me", isMe: true, text: "아니 진짜 뒤질거같다니까?")
     ]
     
     /// 토큰 전송
