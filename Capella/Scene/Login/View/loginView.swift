@@ -42,9 +42,10 @@ struct loginView: View {
                         case .success(let authResults):
                             // 로그인 성공
                             guard let appleIDCredential = authResults.credential as? ASAuthorizationAppleIDCredential else { return }
-                            print("Authentication successful: \(authResults)")
+                            print("Authentication successful: \(appleIDCredential.user)")
+                            
                             // token POST
-                            viewModel.postAppleToken(token: authResults.credential.description)
+                            viewModel.postAppleToken(token: appleIDCredential.user)
                             
                         case .failure(let error):
                             // 로그인 실패
